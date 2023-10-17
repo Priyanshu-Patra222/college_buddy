@@ -6,9 +6,18 @@ import 'package:college_buddy/core/router/router.gr.dart';
 class AppRouter extends $AppRouter {
   @override
   late final List<AutoRoute> routes = [
-    AutoRoute(
-      page: CounterRoute.page,
-      path: '/',
+    // AutoRoute(
+    //   page: CounterRoute.page,
+    //   path: '/',
+    //   initial: true,
+    // ),
+    AdaptiveRoute(
+      page: HomeRoute.page, path: '/home',
+      //initial: true,
+    ),
+    AdaptiveRoute(
+      page: NavbarRoute.page,
+      path: '/navbar',
       initial: true,
     ),
   ];

@@ -32,7 +32,7 @@ class Themes {
         visualDensity: FlexColorScheme.comfortablePlatformDensity,
         useMaterial3: true,
 
-        /// fontFamily: GoogleFonts.getFont('Lato').fontFamily,
+        //  fontFamily: GoogleFonts.getFont('Lato').fontFamily,
 
         ///
       );
@@ -61,7 +61,7 @@ class Themes {
         visualDensity: FlexColorScheme.comfortablePlatformDensity,
         useMaterial3: true,
         // To use the playground font, add GoogleFonts package and uncomment
-        // fontFamily: GoogleFonts.getFont('Lato').fontFamily,
+      //  fontFamily: GoogleFonts.getFont('Lato').fontFamily,
       );
 // If you do not have a themeMode switch, uncomment this line
 // to let the device system mode control the theme mode:

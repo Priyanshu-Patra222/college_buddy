@@ -1,0 +1,9 @@
+2023-10-15 22:14:31.972902  : allImageList = [assets/mars.jpg]
+2023-10-15 22:14:31.976165  : Start writing records
+2023-10-15 22:14:32.109988  : End writing records 0
+2023-10-15 22:28:06.415093  : allImageList = [assets/IMG_20230928_183603.jpg, assets/mars.jpg]
+2023-10-15 22:28:06.425755  : Start writing records
+2023-10-15 22:28:07.045932  : End writing records 0
+2023-10-16 20:54:15.522215  : allImageList = [assets/IMG_20230928_183603.jpg, assets/icons/bank.svg, assets/icons/home.svg, assets/icons/notice.svg, assets/mars.jpg]
+2023-10-16 20:54:15.524070  : Start writing records
+2023-10-16 20:54:15.603865  : End writing records 0
