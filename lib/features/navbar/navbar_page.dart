@@ -1,7 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:college_buddy/const/resource.dart';
-import 'package:college_buddy/features/accountpage/account_page.dart';
-import 'package:college_buddy/features/homepage/homepage.dart';
+import 'package:college_buddy/features/account_page/account_page.dart';
+import 'package:college_buddy/features/homepage/home_page.dart';
 import 'package:college_buddy/features/noticepage/notice_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -44,13 +44,6 @@ class _NavbarViewState extends State<NavbarView> {
       bottomNavigationBar: NavigationBarTheme(
         data: NavigationBarThemeData(
           indicatorColor: Colors.grey.shade400,
-          // AppColors.kPrimaryButtonColor,
-          // labelTextStyle: MaterialStateProperty.all(GoogleFonts.poppins(
-          //   fontSize: 10,
-          //   color: AppColors.grey100,
-          //   fontWeight: FontWeight.w600,
-          // )
-          // ),
         ),
         child: NavigationBar(
           selectedIndex: currentIndex,
@@ -61,15 +54,9 @@ class _NavbarViewState extends State<NavbarView> {
             currentIndex = value;
           }),
           destinations: [
-            NavigationDestination(
-                icon: SvgPicture.asset(R.ASSETS_ICONS_HOME_SVG, height: 20),
-                label: 'Home'),
-            NavigationDestination(
-                icon: SvgPicture.asset(R.ASSETS_ICONS_NOTICE_SVG, height: 20),
-                label: 'Notice'),
-            NavigationDestination(
-                icon: SvgPicture.asset(R.ASSETS_ICONS_BANK_SVG, height: 22),
-                label: 'Accounts'),
+            NavigationDestination(icon: SvgPicture.asset(R.ASSETS_ICONS_HOME_SVG, height: 20), label: 'Home'),
+            NavigationDestination(icon: SvgPicture.asset(R.ASSETS_ICONS_NOTICE_SVG, height: 20), label: 'Notice'),
+            NavigationDestination(icon: SvgPicture.asset(R.ASSETS_ICONS_BANK_SVG, height: 22), label: 'Accounts'),
           ],
         ),
       ),

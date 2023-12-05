@@ -14,6 +14,10 @@ ansicolor
 2.12
 file:///Users/maharajmadanmohan/.pub-cache/hosted/pub.dev/ansicolor-2.0.1/
 file:///Users/maharajmadanmohan/.pub-cache/hosted/pub.dev/ansicolor-2.0.1/lib/
+archive
+2.12
+file:///Users/maharajmadanmohan/.pub-cache/hosted/pub.dev/archive-3.4.9/
+file:///Users/maharajmadanmohan/.pub-cache/hosted/pub.dev/archive-3.4.9/lib/
 args
 2.19
 file:///Users/maharajmadanmohan/.pub-cache/hosted/pub.dev/args-2.4.2/
@@ -190,6 +194,10 @@ flutter_displaymode
 2.12
 file:///Users/maharajmadanmohan/.pub-cache/hosted/pub.dev/flutter_displaymode-0.6.0/
 file:///Users/maharajmadanmohan/.pub-cache/hosted/pub.dev/flutter_displaymode-0.6.0/lib/
+flutter_form_builder
+3.0
+file:///Users/maharajmadanmohan/.pub-cache/hosted/pub.dev/flutter_form_builder-9.1.1/
+file:///Users/maharajmadanmohan/.pub-cache/hosted/pub.dev/flutter_form_builder-9.1.1/lib/
 flutter_lints
 2.19
 file:///Users/maharajmadanmohan/.pub-cache/hosted/pub.dev/flutter_lints-2.0.3/
@@ -202,6 +210,10 @@ flutter_svg
 2.19
 file:///Users/maharajmadanmohan/.pub-cache/hosted/pub.dev/flutter_svg-2.0.7/
 file:///Users/maharajmadanmohan/.pub-cache/hosted/pub.dev/flutter_svg-2.0.7/lib/
+form_builder_validators
+3.0
+file:///Users/maharajmadanmohan/.pub-cache/hosted/pub.dev/form_builder_validators-9.1.0/
+file:///Users/maharajmadanmohan/.pub-cache/hosted/pub.dev/form_builder_validators-9.1.0/lib/
 freezed_annotation
 2.17
 file:///Users/maharajmadanmohan/.pub-cache/hosted/pub.dev/freezed_annotation-2.4.1/
@@ -214,6 +226,10 @@ glob
 2.19
 file:///Users/maharajmadanmohan/.pub-cache/hosted/pub.dev/glob-2.1.2/
 file:///Users/maharajmadanmohan/.pub-cache/hosted/pub.dev/glob-2.1.2/lib/
+google_fonts
+2.14
+file:///Users/maharajmadanmohan/.pub-cache/hosted/pub.dev/google_fonts-6.1.0/
+file:///Users/maharajmadanmohan/.pub-cache/hosted/pub.dev/google_fonts-6.1.0/lib/
 graphs
 2.18
 file:///Users/maharajmadanmohan/.pub-cache/hosted/pub.dev/graphs-2.3.1/
@@ -274,6 +290,10 @@ logging
 2.19
 file:///Users/maharajmadanmohan/.pub-cache/hosted/pub.dev/logging-1.2.0/
 file:///Users/maharajmadanmohan/.pub-cache/hosted/pub.dev/logging-1.2.0/lib/
+lottie
+3.1
+file:///Users/maharajmadanmohan/.pub-cache/hosted/pub.dev/lottie-2.7.0/
+file:///Users/maharajmadanmohan/.pub-cache/hosted/pub.dev/lottie-2.7.0/lib/
 matcher
 2.18
 file:///Users/maharajmadanmohan/.pub-cache/hosted/pub.dev/matcher-0.12.16/
@@ -354,6 +374,10 @@ plugin_platform_interface
 2.19
 file:///Users/maharajmadanmohan/.pub-cache/hosted/pub.dev/plugin_platform_interface-2.1.6/
 file:///Users/maharajmadanmohan/.pub-cache/hosted/pub.dev/plugin_platform_interface-2.1.6/lib/
+pointycastle
+2.14
+file:///Users/maharajmadanmohan/.pub-cache/hosted/pub.dev/pointycastle-3.7.3/
+file:///Users/maharajmadanmohan/.pub-cache/hosted/pub.dev/pointycastle-3.7.3/lib/
 pool
 2.12
 file:///Users/maharajmadanmohan/.pub-cache/hosted/pub.dev/pool-1.5.1/
