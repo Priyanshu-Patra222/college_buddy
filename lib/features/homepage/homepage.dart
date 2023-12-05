@@ -25,7 +25,7 @@ class HomeView extends StatelessWidget {
             child: Column(
               children: [
                 10.heightBox,
-                const Home_Header(),
+                const HomeHeader(),
                 10.heightBox,
                 TextField(
                   textAlign: TextAlign.center,

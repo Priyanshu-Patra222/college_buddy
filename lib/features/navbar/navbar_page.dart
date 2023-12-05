@@ -32,7 +32,7 @@ class _NavbarViewState extends State<NavbarView> {
   var currentIndex = 0;
   @override
   Widget build(BuildContext context) {
-    double displayWidth = MediaQuery.sizeOf(context).width;
+    // double displayWidth = MediaQuery.sizeOf(context).width;
     return Scaffold(
       body: PageView.builder(
         pageSnapping: false,

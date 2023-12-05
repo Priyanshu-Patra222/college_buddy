@@ -1,8 +1,8 @@
 import 'package:college_buddy/const/resource.dart';
 import 'package:flutter/material.dart';
 
-class Home_Header extends StatelessWidget {
-  const Home_Header({
+class HomeHeader extends StatelessWidget {
+  const HomeHeader({
     super.key,
   });
 
