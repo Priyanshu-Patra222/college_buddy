@@ -27,7 +27,7 @@ class _NoticeViewState extends State<NoticeView> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.white,
-        title: Text("L A T E S T   N O T I C E ",
+        title: Text("L A T E S T   N O T I C E",
             style: TextStyle(
                 color: Colors.black,
                 fontFamily: GoogleFonts.poppins().fontFamily,
