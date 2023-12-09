@@ -47,7 +47,7 @@ Future<void> bootstrap(
   unawaited(init());
   await Hive.initFlutter();
   final appBox = await Hive.openBox('appBox');
-
+  // await precacheInitialAssets();
   runApp(
     ProviderScope(
       overrides: [

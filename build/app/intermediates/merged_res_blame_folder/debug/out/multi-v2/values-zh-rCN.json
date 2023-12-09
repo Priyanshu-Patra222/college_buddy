@@ -4,7 +4,7 @@
             "outputFile": "com.example.college_buddy.app-mergeDebugResources-11:/values-zh-rCN/values-zh-rCN.xml",
             "map": [
                 {
-                    "source": "/Users/skferajuddin/.gradle/caches/transforms-3/d7b3278672a60330f7d918b21e8f9697/transformed/core-1.10.1/res/values-zh-rCN/values-zh-rCN.xml",
+                    "source": "/Users/priyanshupatra/.gradle/caches/transforms-3/d7b3278672a60330f7d918b21e8f9697/transformed/core-1.10.1/res/values-zh-rCN/values-zh-rCN.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",
