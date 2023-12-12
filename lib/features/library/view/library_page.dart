@@ -4,7 +4,6 @@ import 'package:college_buddy/features/library/const/library_keys.dart';
 import 'package:college_buddy/shared/custom_widgets/custom_text_formfield.dart';
 import 'package:college_buddy/shared/custom_widgets/drop_down_button_field.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 @RoutePage()
@@ -30,9 +29,9 @@ class _LibraryViewState extends State<LibraryView> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text("L I B R A R Y",
+        title: const Text("L I B R A R Y",
             style: TextStyle(
-                fontFamily: GoogleFonts.poppins().fontFamily,
+                // fontFamily: GoogleFonts.poppins().fontFamily,
                 color: Colors.black,
                 fontSize: 20,
                 fontWeight: FontWeight.bold)),
@@ -51,19 +50,16 @@ class _LibraryViewState extends State<LibraryView> {
                 height: 250,
               ),
               const CustomTextFormField(
-                      hintText: 'Date Of Book issue ',
-                      name: LibraryKeys.dateOfIssue)
+                      hintText: 'Date Of Book issue ', name: LibraryKeys.dateOfIssue)
                   .pOnly(
                 left: 15,
                 right: 15,
               ),
               const CustomTextFormField(
-                      hintText: 'Date Of Book return ',
-                      name: LibraryKeys.dateOfReturn)
+                      hintText: 'Date Of Book return ', name: LibraryKeys.dateOfReturn)
                   .pOnly(left: 15, right: 15, top: 10),
               const CustomTextFormField(
-                      hintText: 'Total Number Of Books',
-                      name: LibraryKeys.quantityOfBooks)
+                      hintText: 'Total Number Of Books', name: LibraryKeys.quantityOfBooks)
                   .pOnly(left: 15, right: 15, top: 10),
               const DropDownButtonField(
                 name: LibraryKeys.booksName,
@@ -84,10 +80,10 @@ class _LibraryViewState extends State<LibraryView> {
             borderRadius: BorderRadius.circular(8),
           ),
         ),
-        child: Text(
+        child: const Text(
           'Request books !!',
           style: TextStyle(
-            fontFamily: GoogleFonts.poppins().fontFamily,
+            // fontFamily: GoogleFonts.poppins().fontFamily,
             color: Colors.white,
             fontSize: 15,
             fontWeight: FontWeight.w600,
@@ -109,11 +105,11 @@ class _LibraryViewState extends State<LibraryView> {
             ),
             shadowColor: Colors.blue,
             surfaceTintColor: Colors.white,
-            title: Center(
+            title: const Center(
               child: Text(
                 'Request Books',
                 style: TextStyle(
-                  fontFamily: GoogleFonts.poppins().fontFamily,
+                  // fontFamily: GoogleFonts.poppins().fontFamily,
                   color: Colors.black,
                   fontSize: 18,
                   fontWeight: FontWeight.w700,
@@ -152,10 +148,10 @@ class _LibraryViewState extends State<LibraryView> {
                     borderRadius: BorderRadius.circular(8),
                   ),
                 ),
-                child: Text(
+                child: const Text(
                   'Cancel',
                   style: TextStyle(
-                    fontFamily: GoogleFonts.poppins().fontFamily,
+                    // fontFamily: GoogleFonts.poppins().fontFamily,
                     color: Colors.white,
                     fontSize: 15,
                     fontWeight: FontWeight.w600,
@@ -173,10 +169,10 @@ class _LibraryViewState extends State<LibraryView> {
                     borderRadius: BorderRadius.circular(8),
                   ),
                 ),
-                child: Text(
+                child: const Text(
                   'Raise Request',
                   style: TextStyle(
-                    fontFamily: GoogleFonts.poppins().fontFamily,
+                    // fontFamily: GoogleFonts.poppins().fontFamily,
                     color: Colors.white,
                     fontSize: 15,
                     fontWeight: FontWeight.w600,

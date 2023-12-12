@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class HomePagePrimaryIcons extends StatelessWidget {
@@ -36,8 +35,8 @@ class HomePagePrimaryIcons extends StatelessWidget {
               child: Text(
                 title,
                 textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontFamily: GoogleFonts.poppins().fontFamily,
+                style: const TextStyle(
+                  // fontFamily: GoogleFonts.poppins().fontFamily,
                   overflow: TextOverflow.clip,
                   fontSize: 16,
                   fontWeight: FontWeight.bold,

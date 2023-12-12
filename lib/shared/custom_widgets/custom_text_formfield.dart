@@ -42,7 +42,7 @@ class CustomTextFormField extends StatelessWidget {
       onChanged: onChanged,
       onTap: onTap,
       readOnly: isReadOnly,
-      style: GoogleFonts.poppins(
+      style: GoogleFonts.inter(
         fontSize: 15,
         color: Colors.black,
         fontWeight: FontWeight.bold,

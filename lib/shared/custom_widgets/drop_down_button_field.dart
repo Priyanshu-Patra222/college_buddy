@@ -43,7 +43,7 @@ class _DropDownButtonFieldState extends State<DropDownButtonField> {
           )
           .toList(),
       onChanged: (value) {},
-      style: GoogleFonts.poppins(
+      style: GoogleFonts.inter(
         fontSize: 16,
         color: Colors.grey.shade500,
         fontWeight: FontWeight.bold,

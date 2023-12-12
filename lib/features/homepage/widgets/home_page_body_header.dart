@@ -1,7 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:college_buddy/core/router/router.gr.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class HomePageBodyHeader extends StatelessWidget {
@@ -48,8 +47,8 @@ class HomeSecondaryIconRow extends StatelessWidget {
             ).h(80).w(80),
             Text(
               title1,
-              style: TextStyle(
-                fontFamily: GoogleFonts.poppins().fontFamily,
+              style: const TextStyle(
+                // fontFamily: GoogleFonts.poppins().fontFamily,
                 overflow: TextOverflow.clip,
                 fontSize: 13,
                 fontWeight: FontWeight.bold,
@@ -68,8 +67,8 @@ class HomeSecondaryIconRow extends StatelessWidget {
             ).h(80).w(80),
             Text(
               title2,
-              style: TextStyle(
-                fontFamily: GoogleFonts.poppins().fontFamily,
+              style: const TextStyle(
+                // // fontFamily: GoogleFonts.poppins().fontFamily,
                 overflow: TextOverflow.clip,
                 fontSize: 13,
                 fontWeight: FontWeight.bold,
@@ -87,8 +86,8 @@ class HomeSecondaryIconRow extends StatelessWidget {
             ).h(80).w(80),
             Text(
               title3,
-              style: TextStyle(
-                fontFamily: GoogleFonts.poppins().fontFamily,
+              style: const TextStyle(
+                // // fontFamily: GoogleFonts.poppins().fontFamily,
                 overflow: TextOverflow.clip,
                 fontSize: 13,
                 fontWeight: FontWeight.bold,

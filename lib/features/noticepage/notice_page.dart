@@ -1,6 +1,5 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 @RoutePage()
@@ -27,10 +26,10 @@ class _NoticeViewState extends State<NoticeView> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.white,
-        title: Text("L A T E S T   N O T I C E",
+        title: const Text("L A T E S T   N O T I C E",
             style: TextStyle(
                 color: Colors.black,
-                fontFamily: GoogleFonts.poppins().fontFamily,
+                // fontFamily: GoogleFonts.poppins().fontFamily,
                 fontSize: 20,
                 fontWeight: FontWeight.bold)),
         centerTitle: true,

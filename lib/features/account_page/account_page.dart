@@ -1,7 +1,6 @@
 import 'package:auto_route/annotations.dart';
 import 'package:college_buddy/const/resource.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 @RoutePage()
@@ -14,10 +13,10 @@ class AccountPage extends StatelessWidget {
         backgroundColor: Colors.white,
         appBar: AppBar(
           backgroundColor: Colors.white,
-          title: Text("P A Y M E N T S",
+          title: const Text("P A Y M E N T S",
               style: TextStyle(
                   color: Colors.black,
-                  fontFamily: GoogleFonts.poppins().fontFamily,
+                  // fontFamily: GoogleFonts.poppins().fontFamily,
                   fontSize: 20,
                   fontWeight: FontWeight.bold)),
           centerTitle: true,

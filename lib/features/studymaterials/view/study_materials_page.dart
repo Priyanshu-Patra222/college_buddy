@@ -30,7 +30,7 @@ class _StudyMaterialsViewState extends State<StudyMaterialsView> {
         title: const Text(
           'M A T E R I A L S',
           style: TextStyle(
-            fontFamily: 'Poppins',
+            // fontFamily: 'Poppins',
             fontWeight: FontWeight.bold,
             fontSize: 20,
             color: Colors.black,

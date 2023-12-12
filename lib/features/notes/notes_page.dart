@@ -1,6 +1,5 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 @RoutePage()
 class NotesPage extends StatelessWidget {
@@ -27,10 +26,10 @@ class _NotesViewState extends State<NotesView> {
       appBar: AppBar(
         backgroundColor: Colors.white,
         centerTitle: true,
-        title: Text(
+        title: const Text(
           "N O T E S",
           style: TextStyle(
-            fontFamily: GoogleFonts.poppins().fontFamily,
+            // fontFamily: GoogleFonts.poppins().fontFamily,
             color: Colors.black,
             fontWeight: FontWeight.bold,
             fontSize: 20,

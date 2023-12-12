@@ -1,6 +1,5 @@
 import 'package:college_buddy/const/resource.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class HomePageHeader extends StatelessWidget {
@@ -18,10 +17,10 @@ class HomePageHeader extends StatelessWidget {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
+                const Text(
                   "Hey, Buddy!",
                   style: TextStyle(
-                    fontFamily: GoogleFonts.poppins().fontFamily,
+                    // fontFamily: GoogleFonts.poppins().fontFamily,
                     overflow: TextOverflow.clip,
                     fontSize: 25,
                     fontWeight: FontWeight.bold,
@@ -30,7 +29,7 @@ class HomePageHeader extends StatelessWidget {
                 Text(
                   "Keep Smiling, Keep Shining 😅",
                   style: TextStyle(
-                    fontFamily: GoogleFonts.poppins().fontFamily,
+                    // fontFamily: GoogleFonts.poppins().fontFamily,
                     overflow: TextOverflow.clip,
                     fontSize: 13,
                     color: Colors.grey.shade500,
@@ -51,8 +50,7 @@ class HomePageHeader extends StatelessWidget {
               ),
               child: CircleAvatar(
                 radius: 30,
-                backgroundImage:
-                    Image.asset(R.ASSETS_ILLUSTRATIONS_PROFILE_PNG).image,
+                backgroundImage: Image.asset(R.ASSETS_ILLUSTRATIONS_PROFILE_PNG).image,
               ),
             )
           ],
@@ -70,14 +68,13 @@ class HomePageHeader extends StatelessWidget {
             fillColor: Colors.grey.shade200,
             hintText: 'Search for the updates here ...',
             hintStyle: TextStyle(
-              fontFamily: GoogleFonts.poppins().fontFamily,
+              // fontFamily: GoogleFonts.poppins().fontFamily,
               overflow: TextOverflow.clip,
               fontSize: 13,
               color: Colors.grey.shade500,
               fontWeight: FontWeight.bold,
             ),
-            contentPadding:
-                const EdgeInsets.only(left: 14.0, bottom: 12.0, top: 0.0),
+            contentPadding: const EdgeInsets.only(left: 14.0, bottom: 12.0, top: 0.0),
             enabledBorder: OutlineInputBorder(
               borderSide: BorderSide(color: Colors.grey.shade300
                   // color: Color(0xff6C63FF),

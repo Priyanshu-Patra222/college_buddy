@@ -4,7 +4,6 @@ import 'package:college_buddy/features/examrecords/const/result_keys.dart';
 import 'package:college_buddy/shared/custom_widgets/custom_text_formfield.dart';
 import 'package:college_buddy/shared/custom_widgets/drop_down_button_field.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 @RoutePage()
@@ -29,10 +28,10 @@ class _ExamViewState extends State<ExamView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("M A R K   H I S T O R Y",
+        title: const Text("M A R K   H I S T O R Y",
             style: TextStyle(
                 color: Colors.black,
-                fontFamily: GoogleFonts.poppins().fontFamily,
+                // fontFamily: GoogleFonts.poppins().fontFamily,
                 fontSize: 20,
                 fontWeight: FontWeight.bold)),
         centerTitle: true,
@@ -62,11 +61,9 @@ class _ExamViewState extends State<ExamView> {
                 dropDownItem: ResultKeys.branchList,
               ).pOnly(top: 10, left: 20, right: 20),
               const CustomTextFormField(
-                      hintText: 'Your Registration Number',
-                      name: ResultKeys.registrationumber)
+                      hintText: 'Your Registration Number', name: ResultKeys.registrationumber)
                   .pOnly(top: 10, left: 20, right: 20),
-              const CustomTextFormField(
-                      hintText: 'Your Roll Number', name: ResultKeys.rollno)
+              const CustomTextFormField(hintText: 'Your Roll Number', name: ResultKeys.rollno)
                   .pOnly(top: 10, left: 20, right: 20, bottom: 15),
               ElevatedButton(
                 onPressed: () {},
@@ -82,8 +79,8 @@ class _ExamViewState extends State<ExamView> {
                   children: [
                     Text(
                       'Get Yours'.toUpperCase(),
-                      style: TextStyle(
-                        fontFamily: GoogleFonts.poppins().fontFamily,
+                      style: const TextStyle(
+                        // fontFamily: GoogleFonts.poppins().fontFamily,
                         color: Colors.white,
                         fontSize: 15,
                         fontWeight: FontWeight.w600,
@@ -100,8 +97,7 @@ class _ExamViewState extends State<ExamView> {
                   ],
                 ),
               ),
-              const CustomTextFormField(
-                      hintText: 'Here you go..', name: ResultKeys.result)
+              const CustomTextFormField(hintText: 'Here you go..', name: ResultKeys.result)
                   .pOnly(top: 5, left: 20, right: 20),
             ],
           ).p(10),

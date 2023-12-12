@@ -5,7 +5,6 @@ import 'package:college_buddy/features/attendance/const/attendance_keys.dart';
 import 'package:college_buddy/shared/custom_widgets/custom_text_formfield.dart';
 import 'package:college_buddy/shared/custom_widgets/drop_down_button_field.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 @RoutePage()
@@ -31,11 +30,10 @@ class _AttendanceViewState extends State<AttendanceView> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        
-        title: Text("A T T E N D A N C E",
+        title: const Text("A T T E N D A N C E",
             style: TextStyle(
                 color: Colors.black,
-                fontFamily: GoogleFonts.poppins().fontFamily,
+                // fontFamily: GoogleFonts.poppins().fontFamily,
                 fontSize: 20,
                 fontWeight: FontWeight.bold)),
         centerTitle: true,
@@ -64,12 +62,10 @@ class _AttendanceViewState extends State<AttendanceView> {
                   dropDownItem: AttendanceKeys.branchList,
                 ).pOnly(top: 10, left: 20, right: 20),
                 const CustomTextFormField(
-                        hintText: 'Your Registration Number',
-                        name: AttendanceKeys.rollno)
+                        hintText: 'Your Registration Number', name: AttendanceKeys.rollno)
                     .pOnly(top: 10, left: 20, right: 20),
                 const CustomTextFormField(
-                        hintText: 'Your Roll Number',
-                        name: AttendanceKeys.registrationumber)
+                        hintText: 'Your Roll Number', name: AttendanceKeys.registrationumber)
                     .pOnly(top: 10, left: 20, right: 20, bottom: 15),
                 ElevatedButton(
                   onPressed: () {
@@ -104,8 +100,7 @@ class _AttendanceViewState extends State<AttendanceView> {
                     ],
                   ),
                 ),
-                const CustomTextFormField(
-                        hintText: 'Here you go', name: AttendanceKeys.result)
+                const CustomTextFormField(hintText: 'Here you go', name: AttendanceKeys.result)
                     .pOnly(top: 5, left: 20, right: 20),
               ],
             ).p(10),
