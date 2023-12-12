@@ -4,7 +4,7 @@
             "outputFile": "com.example.college_buddy.app-mergeDebugResources-11:/values-night-v8/values-night-v8.xml",
             "map": [
                 {
-                    "source": "/Users/skferajuddin/Desktop/development/FlutterProjects/college_buddy/android/app/src/main/res/values-night/styles.xml",
+                    "source": "/Users/priyanshupatra/Desktop/Developer/Flutter Resources & Projects/MacBook/flutter projects/college_buddy/android/app/src/main/res/values-night/styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",

@@ -20,5 +20,24 @@ class AppRouter extends $AppRouter {
       path: '/navbar',
       initial: true,
     ),
+    AdaptiveRoute(
+      page: AttendanceRoute.page,
+      path: '/attendance',
+    ),
+    AdaptiveRoute(
+      page: ExamRoute.page,
+      path: '/exam',
+    ),
+    AdaptiveRoute(
+      page: LibraryRoute.page,
+      path: '/library',
+    ),
+    AdaptiveRoute(page: AttendanceRoute.page, path: '/attendance'),
+    AdaptiveRoute(page: StudyMaterialsRoute.page, path: '/study-materials'),
+    AdaptiveRoute(page: AccountRoute.page, path: '/account'),
+    AdaptiveRoute(page: NoticeRoute.page, path: '/notice'),
+    AdaptiveRoute(page: NotesRoute.page, path: '/notes'),
+    AdaptiveRoute(page: AssignmentRoute.page, path: '/assignment'),
+    AdaptiveRoute(page: SplashRoute.page, path: '/splash'),
   ];
 }
