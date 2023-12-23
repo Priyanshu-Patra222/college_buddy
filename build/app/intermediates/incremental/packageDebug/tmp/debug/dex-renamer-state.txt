@@ -1,4 +1,4 @@
-#Thu Dec 07 22:09:19 IST 2023
+#Sat Dec 23 21:36:00 IST 2023
 base.0=/Users/priyanshupatra/Desktop/Developer/Flutter Resources & Projects/MacBook/flutter projects/college_buddy/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
 path.0=classes.dex
 renamed.0=classes.dex
