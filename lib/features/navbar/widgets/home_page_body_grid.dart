@@ -36,14 +36,16 @@ class HomePagePrimaryIcons extends StatelessWidget {
                 title,
                 textAlign: TextAlign.center,
                 style: const TextStyle(
-                  // fontFamily: GoogleFonts.poppins().fontFamily,
                   overflow: TextOverflow.clip,
                   fontSize: 16,
                   fontWeight: FontWeight.bold,
                 ),
               ).pOnly(top: 10),
             ),
-            Expanded(flex: 2, child: Image.asset(icon, height: 80)),
+            Expanded(
+              flex: 1,
+              child: Image.asset(icon),
+            ),
             Expanded(
               flex: 1,
               child: const Align(

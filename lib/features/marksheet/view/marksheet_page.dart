@@ -4,6 +4,8 @@ import 'package:college_buddy/const/resource.dart';
 import 'package:college_buddy/const/semesters/list_of_semesters.dart';
 import 'package:college_buddy/data/service/login_db/login_db_service_pod.dart';
 import 'package:college_buddy/features/marksheet/controller/marksheet_pod.dart';
+import 'package:college_buddy/shared/riverpod_ext/asynvalue_easy_when.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:velocity_x/velocity_x.dart';
@@ -14,18 +16,18 @@ class MarksheetPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const ExamView();
+    return const MarksheetView();
   }
 }
 
-class ExamView extends StatefulWidget {
-  const ExamView({super.key});
+class MarksheetView extends StatefulWidget {
+  const MarksheetView({super.key});
 
   @override
-  State<ExamView> createState() => _ExamViewState();
+  State<MarksheetView> createState() => _MarksheetViewState();
 }
 
-class _ExamViewState extends State<ExamView> {
+class _MarksheetViewState extends State<MarksheetView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -57,7 +59,7 @@ class _ExamViewState extends State<ExamView> {
                 builder: (context, ref, child) {
                   final studentId = ref.watch(loginDbProvider).getLoginModel()?.student.id;
                   final marksheetAsync = ref.watch(marksheetProvider(studentId!));
-                  return marksheetAsync.when(
+                  return marksheetAsync.easyWhen(
                     data: (marksheetModel) {
                       return ListView.separated(
                         shrinkWrap: true,
@@ -107,8 +109,7 @@ class _ExamViewState extends State<ExamView> {
                         },
                       );
                     },
-                    loading: () => const CircularProgressIndicator().centered(),
-                    error: (error, stackTrace) => Text(error.toString()).centered(),
+                    loadingWidget: () => const CupertinoActivityIndicator(),
                   );
                 },
               ),

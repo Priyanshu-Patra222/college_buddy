@@ -12,8 +12,9 @@ class BankDetailsRepository implements IBankDetailsRepository {
   BankDetailsRepository({required this.dio});
   @override
   Future<Result<BankDetailsModel, APIException>> getBankDetails(
-      {required CancelToken cancelToken, required int regdNo}) async {
-    final result = await dio.get(AppUrls.getBankDetails(regdNo: regdNo), cancelToken: cancelToken);
+      {required CancelToken cancelToken, required String studentId}) async {
+    final result =
+        await dio.get(AppUrls.getBankDetails(studentId: studentId), cancelToken: cancelToken);
     if (result.statusCode == 200 || result.statusCode == 201) {
       return Success(BankDetailsModel.fromMap(result.data));
     } else {

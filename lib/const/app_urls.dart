@@ -23,9 +23,9 @@ class AppUrls {
     return formattedURL;
   }
 
-  static String getBankDetails({required int regdNo}) {
-    const studentBankDetails = "$studentApiURL/bank-details/{regdNo}";
-    String formattedURL = studentBankDetails.replaceAll('{regdNo}', regdNo.toString());
+  static String getBankDetails({required String studentId}) {
+    const studentBankDetails = "$studentApiURL/bank-details/{studentId}";
+    String formattedURL = studentBankDetails.replaceAll('{studentId}', studentId.toString());
     return formattedURL;
   }
 

@@ -1,5 +1,8 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:college_buddy/const/resource.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 @RoutePage()
 class NotesPage extends StatelessWidget {
@@ -27,19 +30,34 @@ class _NotesViewState extends State<NotesView> {
         backgroundColor: Colors.white,
         centerTitle: true,
         title: const Text(
-          "N O T E S",
+          "NOTES",
           style: TextStyle(
-            // fontFamily: GoogleFonts.poppins().fontFamily,
-            color: Colors.black,
+            letterSpacing: 3,
             fontWeight: FontWeight.bold,
             fontSize: 20,
           ),
         ),
       ),
-      body: const SafeArea(
+      body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
-            children: [],
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              SvgPicture.asset(
+                R.ASSETS_ILLUSTRATIONS_NO_DATA_ILLUSTRATION_SVG,
+                fit: BoxFit.scaleDown,
+                height: 200,
+              ),
+              15.heightBox,
+              const Text(
+                'No data found!',
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.w400,
+                ),
+              ).objectBottomCenter(),
+            ],
           ),
         ),
       ),

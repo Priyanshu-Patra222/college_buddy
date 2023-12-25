@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:college_buddy/const/color/app_colors.dart';
 import 'package:college_buddy/core/router/router.gr.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
@@ -125,7 +126,8 @@ class HomePageSecondaryIcon extends StatelessWidget {
         ),
         child: Icon(
           icon,
-          size: 45,
+          size: 40,
+          color: AppColors.kSecondaryThemeColor.withOpacity(0.9),
         ),
       ),
     );

@@ -90,6 +90,10 @@ class R {
   static const String ASSETS_ILLUSTRATIONS_MARK_HISTORY_PNG =
       'assets/illustrations/mark-history.png';
 
+  /// ![preview](file:///Users/priyanshupatra/Desktop/Developer/Flutter Resources & Projects/MacBook/flutter projects/college_buddy/assets/illustrations/no_data_illustration.svg)
+  static const String ASSETS_ILLUSTRATIONS_NO_DATA_ILLUSTRATION_SVG =
+      'assets/illustrations/no_data_illustration.svg';
+
   /// ![preview](file:///Users/priyanshupatra/Desktop/Developer/Flutter Resources & Projects/MacBook/flutter projects/college_buddy/assets/illustrations/notice-board.png)
   static const String ASSETS_ILLUSTRATIONS_NOTICE_BOARD_PNG =
       'assets/illustrations/notice-board.png';

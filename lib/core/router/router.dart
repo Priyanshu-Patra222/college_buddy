@@ -2,6 +2,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:college_buddy/core/router/guards/login_guard.dart';
 import 'package:college_buddy/core/router/guards/splash_guard.dart';
 import 'package:college_buddy/core/router/router.gr.dart';
+import 'package:college_buddy/data/model/bank_details_model.dart';
 import 'package:college_buddy/data/service/login_db/login_db_service.dart';
 
 /// This class used for defined routes and paths na dother properties
@@ -33,19 +34,9 @@ class AppRouter extends $AppRouter {
         AdaptiveRoute(page: AccountRoute.page),
       ],
     ),
-
-    AdaptiveRoute(
-      page: AttendanceRoute.page,
-      path: '/attendance',
-    ),
-    AdaptiveRoute(
-      page: ExamRoute.page,
-      path: '/exam',
-    ),
-    AdaptiveRoute(
-      page: LibraryRoute.page,
-      path: '/library',
-    ),
+    AdaptiveRoute(page: AttendanceRoute.page, path: '/attendance'),
+    AdaptiveRoute(page: MarksheetRoute.page, path: '/marksheet'),
+    AdaptiveRoute(page: LibraryRoute.page, path: '/library'),
     AdaptiveRoute(page: AttendanceRoute.page, path: '/attendance'),
     AdaptiveRoute(page: StudyMaterialsRoute.page, path: '/study-materials'),
     AdaptiveRoute(page: AccountRoute.page, path: '/account'),
@@ -53,5 +44,7 @@ class AppRouter extends $AppRouter {
     AdaptiveRoute(page: NotesRoute.page, path: '/notes'),
     AdaptiveRoute(page: AssignmentRoute.page, path: '/assignment'),
     AdaptiveRoute(page: SplashRoute.page, path: '/splash'),
+    AdaptiveRoute(page: BankDetailsRoute.page, path: '/bank-details'),
+
   ];
 }

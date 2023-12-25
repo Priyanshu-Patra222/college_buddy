@@ -4,6 +4,8 @@ import 'package:college_buddy/const/resource.dart';
 import 'package:college_buddy/const/semesters/list_of_semesters.dart';
 import 'package:college_buddy/data/service/login_db/login_db_service_pod.dart';
 import 'package:college_buddy/features/attendance/controller/attendance_pod.dart';
+import 'package:college_buddy/shared/riverpod_ext/asynvalue_easy_when.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:velocity_x/velocity_x.dart';
@@ -57,7 +59,7 @@ class _AttendanceViewState extends State<AttendanceView> {
                 builder: (context, ref, child) {
                   final studentId = ref.watch(loginDbProvider).getLoginModel()?.student.id;
                   final attendanceAsync = ref.watch(attendanceProvider(studentId!));
-                  return attendanceAsync.when(
+                  return attendanceAsync.easyWhen(
                     data: (attendanceModel) {
                       return GridView.builder(
                         physics: const NeverScrollableScrollPhysics(),
@@ -109,8 +111,7 @@ class _AttendanceViewState extends State<AttendanceView> {
                         },
                       );
                     },
-                    loading: () => const CircularProgressIndicator().centered(),
-                    error: (error, stackTrace) => Text(error.toString()).centered(),
+                    loadingWidget: () => const CupertinoActivityIndicator(),
                   );
                 },
               ),
@@ -121,4 +122,3 @@ class _AttendanceViewState extends State<AttendanceView> {
     );
   }
 }
-

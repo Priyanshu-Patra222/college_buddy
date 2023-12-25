@@ -1,5 +1,8 @@
 import 'package:auto_route/annotations.dart';
+import 'package:college_buddy/const/resource.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 @RoutePage()
 class StudyMaterialsPage extends StatelessWidget {
@@ -28,16 +31,33 @@ class _StudyMaterialsViewState extends State<StudyMaterialsView> {
         elevation: 0,
         centerTitle: true,
         title: const Text(
-          'M A T E R I A L S',
+          'MATERIALS',
           style: TextStyle(
-            // fontFamily: 'Poppins',
             fontWeight: FontWeight.bold,
             fontSize: 20,
-            color: Colors.black,
+            letterSpacing: 3,
           ),
         ),
       ),
-      // body: Center(child:LottieBuilder.network(src) ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          SvgPicture.asset(
+            R.ASSETS_ILLUSTRATIONS_NO_DATA_ILLUSTRATION_SVG,
+            fit: BoxFit.scaleDown,
+            height: 200,
+          ),
+          15.heightBox,
+          const Text(
+            'No data found!',
+            style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.w400,
+            ),
+          ).objectBottomCenter(),
+        ],
+      ),
     );
   }
 }

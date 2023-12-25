@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:college_buddy/const/color/app_colors.dart';
 import 'package:college_buddy/const/resource.dart';
 import 'package:college_buddy/core/router/router.gr.dart';
 import 'package:college_buddy/features/navbar/widgets/home_page_body_grid.dart';
@@ -36,17 +37,19 @@ class HomeView extends StatelessWidget {
                 title2: 'Notice',
                 title3: 'Assignments',
               ),
-              Divider(
-                color: Colors.grey.shade400,
+              20.heightBox,
+              const Divider(
+                color: AppColors.grey300,
                 thickness: 1,
-                indent: 15,
-                endIndent: 15,
+                indent: 80,
+                endIndent: 80,
               ),
-              // 10.heightBox,
+              20.heightBox,
               GridView(
                 padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
-                // physics: const NeverScrollableScrollPhysics(),
+                physics: const NeverScrollableScrollPhysics(),
                 shrinkWrap: true,
+                primary: false,
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
                   crossAxisSpacing: 15,
@@ -59,14 +62,9 @@ class HomeView extends StatelessWidget {
                     onTap: () => context.pushRoute(const AttendanceRoute()),
                   ),
                   HomePagePrimaryIcons(
-                    title: 'Accounts',
-                    icon: R.ASSETS_ILLUSTRATIONS_ACCOUNTS_PNG,
-                    onTap: () => context.pushRoute(const AccountRoute()),
-                  ),
-                  HomePagePrimaryIcons(
                     title: 'Marksheet',
                     icon: R.ASSETS_ILLUSTRATIONS_EXAMRECORDS_PNG,
-                    onTap: () => context.pushRoute(const ExamRoute()),
+                    onTap: () => context.pushRoute(const MarksheetRoute()),
                   ),
                   HomePagePrimaryIcons(
                     title: 'Library',

@@ -6,6 +6,6 @@ import 'package:multiple_result/multiple_result.dart';
 abstract class IBankDetailsRepository {
   Future<Result<BankDetailsModel, APIException>> getBankDetails({
     required CancelToken cancelToken,
-    required int regdNo,
+    required String studentId,
   });
 }

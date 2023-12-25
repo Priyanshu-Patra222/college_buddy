@@ -1,3 +1,4 @@
+import 'package:college_buddy/const/color/app_colors.dart';
 import 'package:college_buddy/const/resource.dart';
 import 'package:college_buddy/data/service/login_db/login_db_service_pod.dart';
 import 'package:flutter/material.dart';
@@ -26,20 +27,19 @@ class HomePageHeader extends StatelessWidget {
                       "Hey, $username!",
                       style: const TextStyle(
                         overflow: TextOverflow.clip,
-                        fontSize: 25,
+                        fontSize: 21,
                         fontWeight: FontWeight.bold,
                       ),
                     );
                   },
                 ),
-                Text(
+                const Text(
                   "Keep Smiling, Keep Shining 😅",
                   style: TextStyle(
                     // fontFamily: GoogleFonts.poppins().fontFamily,
                     overflow: TextOverflow.clip,
                     fontSize: 13,
-                    color: Colors.grey.shade500,
-                    fontWeight: FontWeight.bold,
+                    color: AppColors.grey500,
                   ),
                 ),
               ],
@@ -55,7 +55,7 @@ class HomePageHeader extends StatelessWidget {
                 ),
               ),
               child: CircleAvatar(
-                radius: 30,
+                radius: 20,
                 backgroundImage: Image.asset(R.ASSETS_ILLUSTRATIONS_PROFILE_PNG).image,
               ),
             )
@@ -73,12 +73,12 @@ class HomePageHeader extends StatelessWidget {
             filled: true,
             fillColor: Colors.grey.shade200,
             hintText: 'Search for the updates here ...',
-            hintStyle: TextStyle(
+            hintStyle: const TextStyle(
               // fontFamily: GoogleFonts.poppins().fontFamily,
               overflow: TextOverflow.clip,
               fontSize: 13,
-              color: Colors.grey.shade500,
-              fontWeight: FontWeight.bold,
+              color: AppColors.grey400,
+              fontWeight: FontWeight.w500,
             ),
             contentPadding: const EdgeInsets.only(left: 14.0, bottom: 12.0, top: 0.0),
             enabledBorder: OutlineInputBorder(
@@ -89,7 +89,7 @@ class HomePageHeader extends StatelessWidget {
             ),
           ),
           // textAlign: TextAlign.center,
-        ).p(10),
+        ).py24(),
       ],
     );
   }

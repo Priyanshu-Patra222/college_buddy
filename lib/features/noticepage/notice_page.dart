@@ -48,7 +48,7 @@ class _NoticeViewState extends State<NoticeView> {
         bottom: false,
         child: SingleChildScrollView(
           child: ListView.builder(
-            itemCount: 20,
+            itemCount: 2,
             primary: false,
             shrinkWrap: true,
             physics: const NeverScrollableScrollPhysics(),
@@ -62,7 +62,7 @@ class _NoticeViewState extends State<NoticeView> {
                       style: TextStyle(
                           color: Colors.black, fontSize: 15, fontWeight: FontWeight.w500)),
                   children: [
-                    Text("Noticebdv hjefvefehjkvbmndsvck cgdw ckuwdvc whcvwuvc jwvcywvc vciwbic",
+                    Text("No notice found",
                         style: TextStyle(
                             color: Colors.black, fontSize: 15, fontWeight: FontWeight.w300)),
                   ],

@@ -4,8 +4,10 @@ import 'package:college_buddy/const/resource.dart';
 import 'package:college_buddy/data/service/login_db/login_db_service_pod.dart';
 import 'package:college_buddy/features/library/const/library_keys.dart';
 import 'package:college_buddy/features/library/controller/library_pod.dart';
+import 'package:college_buddy/shared/riverpod_ext/asynvalue_easy_when.dart';
 import 'package:college_buddy/shared/widget/custom_text_formfield.dart';
 import 'package:college_buddy/shared/widget/drop_down_button_field.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl.dart';
@@ -56,7 +58,7 @@ class _LibraryViewState extends State<LibraryView> {
                 builder: (context, ref, child) {
                   final studentId = ref.watch(loginDbProvider).getLoginModel()?.student.id;
                   final libraryAsync = ref.watch(libraryProvider(studentId!));
-                  return libraryAsync.when(
+                  return libraryAsync.easyWhen(
                     data: (libraryModel) {
                       return GridView.builder(
                         physics: const NeverScrollableScrollPhysics(),
@@ -112,8 +114,8 @@ class _LibraryViewState extends State<LibraryView> {
                         },
                       );
                     },
-                    loading: () => const CircularProgressIndicator().centered(),
-                    error: (error, stackTrace) => Text(error.toString()).centered(),
+                    loadingWidget: () => const CupertinoActivityIndicator(),
+                 
                   );
                 },
               ),
