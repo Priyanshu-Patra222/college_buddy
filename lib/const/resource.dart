@@ -1,4 +1,4 @@
-/// Generate by [resource_generator](https://github.com/CaiJingLong/flutter_resource_generator) library.
+/// Generate by [asset_generator](https://github.com/fluttercandies/flutter_asset_generator) library.
 /// PLEASE DO NOT EDIT MANUALLY.
 // ignore_for_file: constant_identifier_names
 class R {
@@ -46,6 +46,9 @@ class R {
 
   /// ![preview](file:///Users/priyanshupatra/Desktop/Developer/Flutter Resources & Projects/MacBook/flutter projects/college_buddy/assets/icons/rollno.png)
   static const String ASSETS_ICONS_ROLLNO_PNG = 'assets/icons/rollno.png';
+
+  /// ![preview](file:///Users/priyanshupatra/Desktop/Developer/Flutter Resources & Projects/MacBook/flutter projects/college_buddy/assets/icons/star.svg)
+  static const String ASSETS_ICONS_STAR_SVG = 'assets/icons/star.svg';
 
   /// ![preview](file:///Users/priyanshupatra/Desktop/Developer/Flutter Resources & Projects/MacBook/flutter projects/college_buddy/assets/illustrations/accounts.png)
   static const String ASSETS_ILLUSTRATIONS_ACCOUNTS_PNG =

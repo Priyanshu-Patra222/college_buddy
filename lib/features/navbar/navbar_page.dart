@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:college_buddy/const/color/app_colors.dart';
 import 'package:college_buddy/const/resource.dart';
 import 'package:college_buddy/core/router/router.gr.dart';
 import 'package:flutter/material.dart';
@@ -22,18 +23,19 @@ class NavBarPage extends StatelessWidget {
         return NavigationBar(
           selectedIndex: tabsRouter.activeIndex,
           onDestinationSelected: tabsRouter.setActiveIndex,
-          destinations:  [
+          indicatorColor: AppColors.kSecondaryThemeColor.withOpacity(0.5),
+          destinations: [
             NavigationDestination(
               icon: SvgPicture.asset(R.ASSETS_ICONS_HOME_SVG, height: 20),
-              label: "a",
+              label: "Home",
             ),
             NavigationDestination(
               icon: SvgPicture.asset(R.ASSETS_ICONS_NOTICE_SVG, height: 20),
-              label: "b",
+              label: "Notice",
             ),
             NavigationDestination(
               icon: SvgPicture.asset(R.ASSETS_ICONS_BANK_SVG, height: 22),
-              label: "c",
+              label: "Bank",
             ),
           ],
         );
@@ -41,4 +43,3 @@ class NavBarPage extends StatelessWidget {
     );
   }
 }
-

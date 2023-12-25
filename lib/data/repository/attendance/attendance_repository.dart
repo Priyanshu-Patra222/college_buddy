@@ -12,8 +12,9 @@ class AttendanceRepository implements IAttendanceRepository {
   AttendanceRepository({required this.dio});
   @override
   Future<Result<AttendanceModel, APIException>> getAttendance(
-      {required CancelToken cancelToken, required int regdNo}) async {
-    final result = await dio.get(AppUrls.getAttendance(regdNo: regdNo), cancelToken: cancelToken);
+      {required CancelToken cancelToken, required String studentId}) async {
+    final result =
+        await dio.get(AppUrls.getAttendance(studentId: studentId), cancelToken: cancelToken);
     if (result.statusCode == 200 || result.statusCode == 201) {
       return Success(AttendanceModel.fromMap(result.data));
     } else {

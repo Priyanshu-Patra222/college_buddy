@@ -1,3 +1,4 @@
+import 'package:college_buddy/const/env/env.dart';
 import 'package:dio/dio.dart';
 
 import 'package:flutter/foundation.dart';
@@ -14,7 +15,7 @@ import 'package:talker_dio_logger/talker_dio_logger.dart';
 final dioProvider = Provider.autoDispose<Dio>(
   (ref) {
     final dio = Dio();
-    dio.options.baseUrl = 'https://randomuser.me/api/';
+    dio.options.baseUrl = Env.developmentBaseUrl;
     if (kDebugMode) {
       dio.interceptors.add(TimeResponseInterceptor());
       dio.interceptors.add(FormDataInterceptor());

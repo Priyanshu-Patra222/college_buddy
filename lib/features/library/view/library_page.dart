@@ -1,8 +1,8 @@
 import 'package:auto_route/annotations.dart';
 import 'package:college_buddy/const/resource.dart';
 import 'package:college_buddy/features/library/const/library_keys.dart';
-import 'package:college_buddy/shared/custom_widgets/custom_text_formfield.dart';
-import 'package:college_buddy/shared/custom_widgets/drop_down_button_field.dart';
+import 'package:college_buddy/shared/widget/custom_text_formfield.dart';
+import 'package:college_buddy/shared/widget/drop_down_button_field.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 

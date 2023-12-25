@@ -35,7 +35,6 @@ dependencies:
   lottie: ^2.7.0
   envied: ^0.5.2
   multiple_result: ^5.1.0
-  neopop: ^1.0.2
 
 dev_dependencies:
   auto_route_generator: ^7.1.1

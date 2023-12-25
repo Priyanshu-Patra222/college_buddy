@@ -1,4 +1,5 @@
 import 'package:auto_route/annotations.dart';
+import 'package:college_buddy/const/color/app_colors.dart';
 import 'package:college_buddy/const/resource.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
@@ -37,7 +38,7 @@ class AccountPage extends StatelessWidget {
                 // log('ischef enabled: $isChefViewEnabled');
               },
               style: ElevatedButton.styleFrom(
-                backgroundColor: const Color(0xff6C63FF),
+                backgroundColor: AppColors.kSecondaryThemeColor,
                 // maximumSize: const Size(200, 50),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(8),

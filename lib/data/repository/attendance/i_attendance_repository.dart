@@ -6,6 +6,6 @@ import 'package:multiple_result/multiple_result.dart';
 abstract class IAttendanceRepository {
   Future<Result<AttendanceModel, APIException>> getAttendance({
     required CancelToken cancelToken,
-    required int regdNo,
+    required String studentId,
   });
 }

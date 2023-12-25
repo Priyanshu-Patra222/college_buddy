@@ -1,12 +1,12 @@
 import 'dart:convert';
 
 class AttendanceModel {
-  final String? message;
-  final AttendanceDetails? attendanceDetails;
+  final String message;
+  final AttendanceDetails attendanceDetails;
 
   AttendanceModel({
-    this.message,
-    this.attendanceDetails,
+    required this.message,
+    required this.attendanceDetails,
   });
 
   AttendanceModel copyWith({
@@ -24,14 +24,13 @@ class AttendanceModel {
 
   factory AttendanceModel.fromMap(Map<String, dynamic> json) => AttendanceModel(
         message: json["message"],
-        attendanceDetails: json["attendanceDetails"] == null
-            ? null
-            : AttendanceDetails.fromMap(json["attendanceDetails"]),
+        attendanceDetails: json["attendanceDetails"] =
+            AttendanceDetails.fromMap(json["attendanceDetails"]),
       );
 
   Map<String, dynamic> toMap() => {
         "message": message,
-        "attendanceDetails": attendanceDetails?.toMap(),
+        "attendanceDetails": attendanceDetails.toMap(),
       };
 }
 

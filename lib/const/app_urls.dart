@@ -35,9 +35,11 @@ class AppUrls {
     return formattedURL;
   }
 
-  static String getAttendance({required int regdNo}) {
-    const studentAttendance = "$studentApiURL/attendance/{regdNo}";
-    String formattedURL = studentAttendance.replaceAll('{regdNo}', regdNo.toString());
+  static String getAttendance({required String studentId}) {
+    const studentAttendance = "$studentApiURL/attendance/{studentId}";
+    String formattedURL = studentAttendance.replaceAll('{studentId}', studentId.toString());
     return formattedURL;
   }
+
+  static const String studentLoginURL = "/student/login";
 }

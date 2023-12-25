@@ -1,5 +1,7 @@
 import 'package:college_buddy/const/resource.dart';
+import 'package:college_buddy/data/service/login_db/login_db_service_pod.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class HomePageHeader extends StatelessWidget {
@@ -17,14 +19,18 @@ class HomePageHeader extends StatelessWidget {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text(
-                  "Hey, Buddy!",
-                  style: TextStyle(
-                    // fontFamily: GoogleFonts.poppins().fontFamily,
-                    overflow: TextOverflow.clip,
-                    fontSize: 25,
-                    fontWeight: FontWeight.bold,
-                  ),
+                Consumer(
+                  builder: (context, ref, child) {
+                    final username = ref.watch(loginDbProvider).getLoginModel()?.student.name;
+                    return Text(
+                      "Hey, $username!",
+                      style: const TextStyle(
+                        overflow: TextOverflow.clip,
+                        fontSize: 25,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    );
+                  },
                 ),
                 Text(
                   "Keep Smiling, Keep Shining 😅",
