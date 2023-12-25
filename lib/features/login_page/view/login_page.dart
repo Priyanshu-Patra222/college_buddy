@@ -63,7 +63,8 @@ class _LoginViewState extends ConsumerState<LoginView> {
             child: Column(
               children: [
                 //star-svg
-                Image.asset(R.ASSETS_ICONS_COLLEGE_LOGO_PNG).h(100).w(100).pOnly(bottom: 50),
+                Image.asset(R.ASSETS_ICONS_COLLEGE_LOGO_PNG).h(100).w(100),
+                "Srinix College Of Engineering".text.xl.makeCentered().pOnly(top: 10, bottom: 50),
                 //roll-number
                 FormBuilderTextField(
                   name: LoginFormKeys.rollNumber,
