@@ -6,6 +6,6 @@ import 'package:multiple_result/multiple_result.dart';
 abstract class IMarksheetRepository {
   Future<Result<MarksheetModel, APIException>> getMarksheet({
     required CancelToken cancelToken,
-    required int regdNo,
+    required String studentId,
   });
 }

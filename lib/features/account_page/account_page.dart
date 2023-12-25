@@ -15,12 +15,15 @@ class AccountPage extends StatelessWidget {
         backgroundColor: Colors.white,
         appBar: AppBar(
           backgroundColor: Colors.white,
-          title: const Text("P A Y M E N T S",
-              style: TextStyle(
-                  color: Colors.black,
-                  // fontFamily: GoogleFonts.poppins().fontFamily,
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold)),
+          title: const Text(
+            "P A Y M E N T S",
+            style: TextStyle(
+              color: Colors.black,
+              // fontFamily: GoogleFonts.poppins().fontFamily,
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
           centerTitle: true,
           elevation: 0,
         ),

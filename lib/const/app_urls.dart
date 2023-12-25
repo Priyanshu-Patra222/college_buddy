@@ -17,9 +17,9 @@ class AppUrls {
     return formattedURL;
   }
 
-  static String getMarksheet({required int regdNo}) {
-    const studentMarksheet = "$studentApiURL/marksheet/{regdNo}";
-    String formattedURL = studentMarksheet.replaceAll('{regdNo}', regdNo.toString());
+  static String getMarksheet({required String studentId}) {
+    const studentMarksheet = "$studentApiURL/marksheet/{studentId}";
+    String formattedURL = studentMarksheet.replaceAll('{studentId}', studentId.toString());
     return formattedURL;
   }
 
@@ -29,9 +29,9 @@ class AppUrls {
     return formattedURL;
   }
 
-  static String getLibrary({required int regdNo}) {
-    const studentLibrary = "$studentApiURL/library/{regdNo}";
-    String formattedURL = studentLibrary.replaceAll('{regdNo}', regdNo.toString());
+  static String getLibrary({required String studentId}) {
+    const studentLibrary = "$studentApiURL/library/{studentId}";
+    String formattedURL = studentLibrary.replaceAll('{studentId}', studentId.toString());
     return formattedURL;
   }
 

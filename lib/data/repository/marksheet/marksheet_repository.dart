@@ -12,8 +12,8 @@ class MarksheetRepository implements IMarksheetRepository {
   MarksheetRepository({required this.dio});
   @override
   Future<Result<MarksheetModel, APIException>> getMarksheet(
-      {required CancelToken cancelToken, required int regdNo}) async {
-    final result = await dio.get(AppUrls.getMarksheet(regdNo: regdNo), cancelToken: cancelToken);
+      {required CancelToken cancelToken, required String studentId}) async {
+    final result = await dio.get(AppUrls.getMarksheet(studentId: studentId), cancelToken: cancelToken);
     if (result.statusCode == 200 || result.statusCode == 201) {
       return Success(MarksheetModel.fromMap(result.data));
     } else {

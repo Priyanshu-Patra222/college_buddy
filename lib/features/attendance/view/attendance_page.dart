@@ -1,6 +1,7 @@
 import 'package:auto_route/annotations.dart';
 import 'package:college_buddy/const/color/app_colors.dart';
 import 'package:college_buddy/const/resource.dart';
+import 'package:college_buddy/const/semesters/list_of_semesters.dart';
 import 'package:college_buddy/data/service/login_db/login_db_service_pod.dart';
 import 'package:college_buddy/features/attendance/controller/attendance_pod.dart';
 import 'package:flutter/material.dart';
@@ -121,13 +122,3 @@ class _AttendanceViewState extends State<AttendanceView> {
   }
 }
 
-const listOfSemesters = [
-  "1st",
-  "2nd",
-  "3rd",
-  "4th",
-  "5th",
-  "6th",
-  "7th",
-  "8th",
-];

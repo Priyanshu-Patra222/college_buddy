@@ -12,8 +12,8 @@ class LibraryRepository implements ILibraryRepository {
   LibraryRepository({required this.dio});
   @override
   Future<Result<LibraryModel, APIException>> getLibrary(
-      {required CancelToken cancelToken, required int regdNo}) async {
-    final result = await dio.get(AppUrls.getLibrary(regdNo: regdNo), cancelToken: cancelToken);
+      {required CancelToken cancelToken, required String studentId}) async {
+    final result = await dio.get(AppUrls.getLibrary(studentId: studentId), cancelToken: cancelToken);
     if (result.statusCode == 200 || result.statusCode == 201) {
       return Success(LibraryModel.fromMap(result.data));
     } else {

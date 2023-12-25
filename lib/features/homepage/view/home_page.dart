@@ -64,7 +64,7 @@ class HomeView extends StatelessWidget {
                     onTap: () => context.pushRoute(const AccountRoute()),
                   ),
                   HomePagePrimaryIcons(
-                    title: 'Exam Records',
+                    title: 'Marksheet',
                     icon: R.ASSETS_ILLUSTRATIONS_EXAMRECORDS_PNG,
                     onTap: () => context.pushRoute(const ExamRoute()),
                   ),

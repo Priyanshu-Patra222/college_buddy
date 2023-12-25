@@ -1,9 +1,14 @@
 import 'package:auto_route/annotations.dart';
+import 'package:college_buddy/const/color/app_colors.dart';
 import 'package:college_buddy/const/resource.dart';
+import 'package:college_buddy/data/service/login_db/login_db_service_pod.dart';
 import 'package:college_buddy/features/library/const/library_keys.dart';
+import 'package:college_buddy/features/library/controller/library_pod.dart';
 import 'package:college_buddy/shared/widget/custom_text_formfield.dart';
 import 'package:college_buddy/shared/widget/drop_down_button_field.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:intl/intl.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 @RoutePage()
@@ -29,12 +34,14 @@ class _LibraryViewState extends State<LibraryView> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: const Text("L I B R A R Y",
-            style: TextStyle(
-                // fontFamily: GoogleFonts.poppins().fontFamily,
-                color: Colors.black,
-                fontSize: 20,
-                fontWeight: FontWeight.bold)),
+        title: const Text(
+          "LIBRARY",
+          style: TextStyle(
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+            letterSpacing: 3,
+          ),
+        ),
         centerTitle: true,
         backgroundColor: Colors.white,
         elevation: 0,
@@ -43,29 +50,73 @@ class _LibraryViewState extends State<LibraryView> {
         child: SingleChildScrollView(
           child: Column(
             mainAxisSize: MainAxisSize.min,
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Image.asset(
-                R.ASSETS_ILLUSTRATIONS_BOOK_SHELVES_PNG,
-                height: 250,
+              Image.asset(R.ASSETS_ILLUSTRATIONS_BOOK_SHELVES_PNG, height: 150).objectCenter(),
+              Consumer(
+                builder: (context, ref, child) {
+                  final studentId = ref.watch(loginDbProvider).getLoginModel()?.student.id;
+                  final libraryAsync = ref.watch(libraryProvider(studentId!));
+                  return libraryAsync.when(
+                    data: (libraryModel) {
+                      return GridView.builder(
+                        physics: const NeverScrollableScrollPhysics(),
+                        shrinkWrap: true,
+                        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                          crossAxisCount: 2,
+                          mainAxisSpacing: 15.0,
+                          crossAxisSpacing: 15.0,
+                          childAspectRatio: 1.0,
+                          mainAxisExtent: 150,
+                        ),
+                        itemCount: libraryModel.libraryDetails!.booksBorrowed!.length,
+                        itemBuilder: (context, index) {
+                          // final totalAttendanceLength = attendanceModel.attendanceDetails.attendance?.length;
+                          final eachBook = libraryModel.libraryDetails!.booksBorrowed![index];
+                          return Container(
+                            padding: const EdgeInsets.all(15),
+                            decoration: BoxDecoration(
+                              color: AppColors.grey300,
+                              borderRadius: BorderRadius.circular(20),
+                            ),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Expanded(
+                                  flex: 2,
+                                  child: Text(
+                                    "Due date: ${DateFormat.yMMMEd().format(eachBook.dueDate!)}",
+                                    style: const TextStyle(
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.w500,
+                                      color: AppColors.grey700,
+                                    ),
+                                  ),
+                                ),
+                                const Divider(
+                                  color: AppColors.grey400,
+                                  thickness: 1,
+                                ),
+                                Expanded(
+                                  flex: 2,
+                                  child: Text(
+                                    eachBook.bookTitle.toString(),
+                                    style: const TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      color: AppColors.grey700,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          );
+                        },
+                      );
+                    },
+                    loading: () => const CircularProgressIndicator().centered(),
+                    error: (error, stackTrace) => Text(error.toString()).centered(),
+                  );
+                },
               ),
-              const CustomTextFormField(
-                      hintText: 'Date Of Book issue ', name: LibraryKeys.dateOfIssue)
-                  .pOnly(
-                left: 15,
-                right: 15,
-              ),
-              const CustomTextFormField(
-                      hintText: 'Date Of Book return ', name: LibraryKeys.dateOfReturn)
-                  .pOnly(left: 15, right: 15, top: 10),
-              const CustomTextFormField(
-                      hintText: 'Total Number Of Books', name: LibraryKeys.quantityOfBooks)
-                  .pOnly(left: 15, right: 15, top: 10),
-              const DropDownButtonField(
-                name: LibraryKeys.booksName,
-                hintText: 'Select Your Semester',
-                dropDownItem: LibraryKeys.bookList,
-              ).pOnly(left: 15, right: 15, top: 10),
             ],
           ).pOnly(left: 10, right: 10),
         ),

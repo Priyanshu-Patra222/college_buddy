@@ -11,22 +11,17 @@
 import 'package:auto_route/auto_route.dart' as _i14;
 import 'package:college_buddy/features/account_page/account_page.dart' as _i1;
 import 'package:college_buddy/features/assignment/assignment_page.dart' as _i2;
-import 'package:college_buddy/features/attendance/view/attendance_page.dart'
-    as _i3;
-import 'package:college_buddy/features/counter/view/counter_page.dart'
-    deferred as _i4;
-import 'package:college_buddy/features/exam_records/view/result_page.dart'
-    as _i5;
-import 'package:college_buddy/features/homepage/view/home_page.dart'
-    deferred as _i6;
+import 'package:college_buddy/features/attendance/view/attendance_page.dart' as _i3;
+import 'package:college_buddy/features/counter/view/counter_page.dart' deferred as _i4;
+import 'package:college_buddy/features/homepage/view/home_page.dart' deferred as _i6;
 import 'package:college_buddy/features/library/view/library_page.dart' as _i7;
 import 'package:college_buddy/features/login_page/view/login_page.dart' as _i8;
+import 'package:college_buddy/features/marksheet/view/marksheet_page.dart' as _i5;
 import 'package:college_buddy/features/navbar/navbar_page.dart' deferred as _i9;
 import 'package:college_buddy/features/notes/view/notes_page.dart' as _i10;
 import 'package:college_buddy/features/noticepage/notice_page.dart' as _i11;
 import 'package:college_buddy/features/splash/view/splash_page.dart' as _i12;
-import 'package:college_buddy/features/studymaterials/view/study_materials_page.dart'
-    as _i13;
+import 'package:college_buddy/features/studymaterials/view/study_materials_page.dart' as _i13;
 
 abstract class $AppRouter extends _i14.RootStackRouter {
   $AppRouter({super.navigatorKey});
@@ -63,7 +58,7 @@ abstract class $AppRouter extends _i14.RootStackRouter {
     ExamRoute.name: (routeData) {
       return _i14.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i5.ExamPage(),
+        child: const _i5.MarksheetPage(),
       );
     },
     HomeRoute.name: (routeData) {
@@ -180,7 +175,7 @@ class CounterRoute extends _i14.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i5.ExamPage]
+/// [_i5.MarksheetPage]
 class ExamRoute extends _i14.PageRouteInfo<void> {
   const ExamRoute({List<_i14.PageRouteInfo>? children})
       : super(
