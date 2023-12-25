@@ -35,6 +35,7 @@ dependencies:
   lottie: ^2.7.0
   envied: ^0.5.2
   multiple_result: ^5.1.0
+  flutter_screen_lock: ^9.0.1
 
 dev_dependencies:
   auto_route_generator: ^7.1.1

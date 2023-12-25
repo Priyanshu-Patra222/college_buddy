@@ -2,6 +2,7 @@ import 'package:auto_route/annotations.dart';
 import 'package:college_buddy/const/color/app_colors.dart';
 import 'package:college_buddy/const/resource.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screen_lock/flutter_screen_lock.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 @RoutePage()
@@ -47,12 +48,22 @@ class AccountPage extends StatelessWidget {
               child: Row(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  Text(
-                    'Click to Authenticate'.toUpperCase(),
-                    style: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 16,
-                      fontWeight: FontWeight.w600,
+                  GestureDetector(
+                    onTap: () {
+                      screenLock(
+                        context: context,
+                        correctString: '1234',
+                        canCancel: false,
+                        onUnlocked: () {},
+                      );
+                    },
+                    child: Text(
+                      'Click to Authenticate'.toUpperCase(),
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 16,
+                        fontWeight: FontWeight.w600,
+                      ),
                     ),
                   ),
                   Padding(
