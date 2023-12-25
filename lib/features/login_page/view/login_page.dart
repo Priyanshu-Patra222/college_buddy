@@ -10,7 +10,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:form_builder_validators/form_builder_validators.dart';
 import 'package:velocity_x/velocity_x.dart';
 
@@ -42,7 +41,7 @@ class _LoginViewState extends ConsumerState<LoginView> {
             rollNo: _loginFormKey.currentState!.fields[LoginFormKeys.rollNumber]!.value.toString(),
             email: _loginFormKey.currentState!.fields[LoginFormKeys.email]!.value.toString(),
             password: _loginFormKey.currentState!.fields[LoginFormKeys.password]!.value.toString(),
-            onUserLoggedIn: (loginModelResponse)  {
+            onUserLoggedIn: (loginModelResponse) {
               if (loginModelResponse.student.id.isNotEmpty) {
                 talker.debug("msg: ${loginModelResponse.student.id}");
                 context.router.replaceAll([const NavBarRoute()]);
@@ -64,7 +63,7 @@ class _LoginViewState extends ConsumerState<LoginView> {
             child: Column(
               children: [
                 //star-svg
-                SvgPicture.asset(R.ASSETS_ICONS_STAR_SVG).h(50).w(50).pOnly(bottom: 50),
+                Image.asset(R.ASSETS_ICONS_COLLEGE_LOGO_PNG).h(100).w(100).pOnly(bottom: 50),
                 //roll-number
                 FormBuilderTextField(
                   name: LoginFormKeys.rollNumber,

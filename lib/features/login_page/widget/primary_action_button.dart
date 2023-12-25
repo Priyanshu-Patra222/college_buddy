@@ -1,3 +1,4 @@
+import 'package:college_buddy/const/color/app_colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -18,6 +19,7 @@ class PrimaryActionButton extends StatelessWidget {
         ? const CupertinoActivityIndicator()
         : FilledButton.tonal(
             style: FilledButton.styleFrom(
+              backgroundColor: AppColors.kSecondaryThemeColor,
               elevation: 1.0,
               shape: const RoundedRectangleBorder(
                 borderRadius: BorderRadius.all(
@@ -28,7 +30,7 @@ class PrimaryActionButton extends StatelessWidget {
             onPressed: onPressed,
             child: Text(
               labelText,
-              style: const TextStyle(fontSize: 15),
+              style: const TextStyle(fontSize: 15, color: Colors.white),
             ),
           );
   }

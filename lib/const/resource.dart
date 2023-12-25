@@ -28,6 +28,10 @@ class R {
   /// ![preview](file:///Users/priyanshupatra/Desktop/Developer/Flutter Resources & Projects/MacBook/flutter projects/college_buddy/assets/icons/click.png)
   static const String ASSETS_ICONS_CLICK_PNG = 'assets/icons/click.png';
 
+  /// ![preview](file:///Users/priyanshupatra/Desktop/Developer/Flutter Resources & Projects/MacBook/flutter projects/college_buddy/assets/icons/college-logo.png)
+  static const String ASSETS_ICONS_COLLEGE_LOGO_PNG =
+      'assets/icons/college-logo.png';
+
   /// ![preview](file:///Users/priyanshupatra/Desktop/Developer/Flutter Resources & Projects/MacBook/flutter projects/college_buddy/assets/icons/home.svg)
   static const String ASSETS_ICONS_HOME_SVG = 'assets/icons/home.svg';
 
