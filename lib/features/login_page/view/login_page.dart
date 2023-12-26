@@ -151,26 +151,6 @@ class _LoginViewState extends ConsumerState<LoginView> {
                 SignInButton(
                   onSignin: onSignin,
                 ).py20(),
-
-                RichText(
-                  text: const TextSpan(
-                    text: "Already have an account? ",
-                    style: TextStyle(
-                      color: AppColors.grey700,
-                      fontSize: 15,
-                    ),
-                    children: [
-                      TextSpan(
-                        text: 'Sign Up',
-                        style: TextStyle(
-                          fontSize: 15,
-                          fontWeight: FontWeight.w600,
-                          color: AppColors.grey700,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
               ],
             ).px16(),
           ),
