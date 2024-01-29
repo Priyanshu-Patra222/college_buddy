@@ -53,7 +53,8 @@ class _NavBarPageState extends State<NavBarPage> {
                     label: "Home",
                   ),
                   NavigationDestination(
-                    icon: SvgPicture.asset(R.ASSETS_ICONS_NOTICE_SVG, height: 20),
+                    icon:
+                        SvgPicture.asset(R.ASSETS_ICONS_NOTICE_SVG, height: 20),
                     label: "Notice",
                   ),
                   NavigationDestination(

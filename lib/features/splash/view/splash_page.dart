@@ -28,7 +28,7 @@ class _SplashViewState extends State<SplashView> {
     super.initState();
     // Navigate to the next screen after 5 seconds
     Timer(
-      const Duration(seconds: 5),
+      const Duration(seconds:5),
       () {
         // Replace 'YourNextPageRoute' with the actual route you want to navigate to
         context.router.replace(const LoginRoute());

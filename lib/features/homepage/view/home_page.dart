@@ -2,9 +2,9 @@ import 'package:auto_route/auto_route.dart';
 import 'package:college_buddy/const/color/app_colors.dart';
 import 'package:college_buddy/const/resource.dart';
 import 'package:college_buddy/core/router/router.gr.dart';
-import 'package:college_buddy/features/navbar/widgets/home_page_body_grid.dart';
-import 'package:college_buddy/features/navbar/widgets/home_page_body_header.dart';
-import 'package:college_buddy/features/navbar/widgets/home_page_header.dart';
+import 'package:college_buddy/features/homepage/view/widgets/home_page_body_grid.dart';
+import 'package:college_buddy/features/homepage/view/widgets/home_page_body_header.dart';
+import 'package:college_buddy/features/homepage/view/widgets/home_page_header.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 
@@ -37,16 +37,17 @@ class HomeView extends StatelessWidget {
                 title2: 'Notice',
                 title3: 'Assignments',
               ),
-              20.heightBox,
+              15.heightBox,
               const Divider(
                 color: AppColors.grey300,
                 thickness: 1,
-                indent: 80,
-                endIndent: 80,
+                indent: 50,
+                endIndent: 50,
               ),
-              20.heightBox,
+              15.heightBox,
               GridView(
-                padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
                 physics: const NeverScrollableScrollPhysics(),
                 shrinkWrap: true,
                 primary: false,

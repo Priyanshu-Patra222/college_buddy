@@ -1,6 +1,7 @@
 import 'package:college_buddy/const/color/app_colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class PrimaryActionButton extends StatelessWidget {
   final String labelText;
@@ -30,7 +31,10 @@ class PrimaryActionButton extends StatelessWidget {
             onPressed: onPressed,
             child: Text(
               labelText,
-              style: const TextStyle(fontSize: 15, color: Colors.white),
+              style: TextStyle(
+                  fontFamily: GoogleFonts.poppins().fontFamily,
+                  fontSize: 15,
+                  color: Colors.white),
             ),
           );
   }
