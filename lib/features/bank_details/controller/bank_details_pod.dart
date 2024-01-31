@@ -1,4 +1,3 @@
-import 'package:college_buddy/data/model/atttendance_model.dart';
 import 'package:college_buddy/data/model/bank_details_model.dart';
 import 'package:college_buddy/data/repository/bank_details/bank_details_repo_pod.dart';
 import 'package:college_buddy/shared/riverpod_ext/cancel_extensions.dart';

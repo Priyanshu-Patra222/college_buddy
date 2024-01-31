@@ -53,11 +53,12 @@ class AccountPage extends StatelessWidget {
                   GestureDetector(
                     onTap: () {
                       screenLock(
-                        context: context,
-                        correctString: '1234',
-                        canCancel: false,
-                        onUnlocked: () => context.navigateTo(const BankDetailsRoute()),
-                      );
+                          context: context,
+                          correctString: '1234',
+                          onUnlocked: () {
+                            context.router.pop();
+                            context.navigateTo(const BankDetailsRoute());
+                          });
                     },
                     child: const Text(
                       'Click to Authenticate',

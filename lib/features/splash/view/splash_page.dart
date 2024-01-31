@@ -1,4 +1,7 @@
+import 'dart:async';
+
 import 'package:auto_route/auto_route.dart';
+import 'package:college_buddy/core/router/router.gr.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
@@ -20,6 +23,19 @@ class SplashView extends StatefulWidget {
 }
 
 class _SplashViewState extends State<SplashView> {
+  @override
+  void initState() {
+    super.initState();
+    // Navigate to the next screen after 5 seconds
+    Timer(
+      const Duration(seconds:5),
+      () {
+        // Replace 'YourNextPageRoute' with the actual route you want to navigate to
+        context.router.replace(const LoginRoute());
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
