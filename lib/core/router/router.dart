@@ -3,7 +3,6 @@ import 'package:college_buddy/core/router/guards/login_guard.dart';
 import 'package:college_buddy/core/router/guards/splash_guard.dart';
 import 'package:college_buddy/core/router/router.gr.dart';
 import 'package:college_buddy/data/service/login_db/login_db_service.dart';
-import 'package:college_buddy/features/profile/view/profile_page.dart';
 
 /// This class used for defined routes and paths na dother properties
 @AutoRouterConfig()

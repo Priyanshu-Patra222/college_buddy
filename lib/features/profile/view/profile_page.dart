@@ -26,7 +26,8 @@ class _ProfileViewState extends State<ProfileView> {
   @override
   Widget build(BuildContext context) {
     final brightness = MediaQuery.of(context).platformBrightness;
-    final isDarkMode = brightness == Brightness.dark;
+    bool isDarkMode = brightness == Brightness.dark;
+    // talker.debug("value $isDarkMode");
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
@@ -40,7 +41,12 @@ class _ProfileViewState extends State<ProfileView> {
             .pOnly(left: 10),
         actions: [
           IconButton(
-              onPressed: () {},
+              onPressed: () {
+                setState(() {
+                  isDarkMode = brightness == Brightness.light;
+                });
+                // talker.debug("value2 $isDarkMode");
+              },
               icon: Icon(isDarkMode ? Icons.dark_mode : Icons.light_mode))
         ],
       ),
@@ -65,34 +71,41 @@ class _ProfileViewState extends State<ProfileView> {
                   Positioned(
                       bottom: 3,
                       right: 0,
-                      child: Icon(
-                        Icons.camera_alt_rounded,
-                        size: 30,
-                        color: isDarkMode ? Colors.white : Colors.black,
-                      )),
+                      child: Container(
+                        decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: isDarkMode
+                                ? Colors.grey
+                                : Colors.grey.shade200),
+                        child: Icon(
+                          Icons.camera_alt_rounded,
+                          size: 20,
+                          color: isDarkMode ? Colors.white : Colors.black,
+                        ),
+                      ).h(30).w(30)),
                 ],
               ).p8(),
             ),
             15.heightBox,
             const StudentDetails().p12(),
             20.heightBox,
-            SizedBox(
-              child: ElevatedButton(
-                onPressed: () {},
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color(0xff6C63FF),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(8),
-                  ),
+            ElevatedButton(
+              onPressed: () {},
+              style: ElevatedButton.styleFrom(
+                elevation: isDarkMode ? 20 : 0,
+                shadowColor: const Color(0xff6C63FF),
+                backgroundColor: const Color(0xff6C63FF),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(8),
                 ),
-                child: Text(
-                  'Log out',
-                  style: TextStyle(
-                    fontFamily: GoogleFonts.poppins().fontFamily,
-                    color: Colors.white,
-                    fontSize: 18,
-                    fontWeight: FontWeight.w600,
-                  ),
+              ),
+              child: Text(
+                'Log out',
+                style: TextStyle(
+                  fontFamily: GoogleFonts.poppins().fontFamily,
+                  color: Colors.white,
+                  fontSize: 18,
+                  fontWeight: FontWeight.w600,
                 ),
               ),
             ).w(300),

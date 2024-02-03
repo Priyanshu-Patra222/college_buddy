@@ -20,6 +20,7 @@ class SignInButton extends ConsumerWidget {
       return switch (loginStates) {
         InitialLoginState() => PrimaryActionButton(
             labelText: 'Sign in',
+            
             onPressed: onSignin,
           ),
         LoggingInState() => const PrimaryActionButton(
