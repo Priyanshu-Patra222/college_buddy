@@ -1,7 +1,10 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:college_buddy/bootstrap.dart';
 import 'package:college_buddy/const/resource.dart';
+import 'package:college_buddy/core/theme/theme_controller.dart';
 import 'package:college_buddy/features/profile/widgets/student_details_list.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:velocity_x/velocity_x.dart';
 
@@ -15,39 +18,46 @@ class ProfilePage extends StatelessWidget {
   }
 }
 
-class ProfileView extends StatefulWidget {
+class ProfileView extends ConsumerStatefulWidget {
   const ProfileView({super.key});
 
   @override
-  State<ProfileView> createState() => _ProfileViewState();
+  ConsumerState<ProfileView> createState() => _ProfileViewState();
 }
 
-class _ProfileViewState extends State<ProfileView> {
+class _ProfileViewState extends ConsumerState<ProfileView> {
   @override
   Widget build(BuildContext context) {
-    final brightness = MediaQuery.of(context).platformBrightness;
-    bool isDarkMode = brightness == Brightness.dark;
-    // talker.debug("value $isDarkMode");
+    final isdarkMode = ref.read(themecontrollerProvider);
+    // talker.debug("value2 $isdarkMode");
+
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Colors.transparent,
         leading: IconButton(
-                onPressed: () {
-                  context.router.pop();
-                },
-                icon: Icon(Icons.arrow_back,
-                    color: isDarkMode ? Colors.white : Colors.black))
-            .pOnly(left: 10),
+            onPressed: () {
+              context.router.pop();
+            },
+            icon: const Icon(
+              Icons.arrow_back,
+            )).pOnly(left: 10),
         actions: [
           IconButton(
               onPressed: () {
+                ref.watch(themecontrollerProvider.notifier).changeTheme(
+                    isdarkMode == ThemeMode.light
+                        ? ThemeMode.dark
+                        : ThemeMode.light);
                 setState(() {
-                  isDarkMode = brightness == Brightness.light;
+                  isdarkMode == ThemeMode.light
+                      ? ThemeMode.dark
+                      : ThemeMode.light;
                 });
-                // talker.debug("value2 $isDarkMode");
               },
-              icon: Icon(isDarkMode ? Icons.dark_mode : Icons.light_mode))
+              icon: Icon(isdarkMode == ThemeMode.light
+                  ? Icons.dark_mode
+                  : Icons.light_mode))
         ],
       ),
       body: SingleChildScrollView(
@@ -64,6 +74,7 @@ class _ProfileViewState extends State<ProfileView> {
               child: Stack(
                 children: [
                   CircleAvatar(
+                    // backgroundColor: Colors.white,
                     radius: 70,
                     backgroundImage:
                         Image.asset(R.ASSETS_ILLUSTRATIONS_PROFILE_PNG).image,
@@ -74,13 +85,12 @@ class _ProfileViewState extends State<ProfileView> {
                       child: Container(
                         decoration: BoxDecoration(
                             shape: BoxShape.circle,
-                            color: isDarkMode
-                                ? Colors.grey
-                                : Colors.grey.shade200),
-                        child: Icon(
+                            color: isdarkMode == ThemeMode.light
+                                ? Colors.grey.shade200
+                                : Colors.grey),
+                        child: const Icon(
                           Icons.camera_alt_rounded,
                           size: 20,
-                          color: isDarkMode ? Colors.white : Colors.black,
                         ),
                       ).h(30).w(30)),
                 ],
@@ -92,7 +102,7 @@ class _ProfileViewState extends State<ProfileView> {
             ElevatedButton(
               onPressed: () {},
               style: ElevatedButton.styleFrom(
-                elevation: isDarkMode ? 20 : 0,
+                elevation: isdarkMode == ThemeMode.light ? 0 : 20,
                 shadowColor: const Color(0xff6C63FF),
                 backgroundColor: const Color(0xff6C63FF),
                 shape: RoundedRectangleBorder(

@@ -49,12 +49,12 @@ class _NoticeViewState extends State<NoticeView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      // backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.transparent,
         title: const Text("L A T E S T   N O T I C E",
             style: TextStyle(
-                color: Colors.black,
+                // color: Colors.black,
                 // fontFamily: GoogleFonts.poppins().fontFamily,
                 fontSize: 20,
                 fontWeight: FontWeight.bold)),
@@ -81,7 +81,7 @@ class _NoticeViewState extends State<NoticeView> {
                   child: ExpansionTile(
                     title: const Text("Latest Notice ..",
                         style: TextStyle(
-                            color: Colors.black,
+                            // color: Colors.black,
                             fontSize: 15,
                             fontWeight: FontWeight.w500)),
                     children: [
@@ -97,7 +97,7 @@ class _NoticeViewState extends State<NoticeView> {
                                 onTap: () {},
                                 child: Container(
                                   decoration: BoxDecoration(
-                                      color: Colors.white.withOpacity(0.7),
+                                      color: Colors.white.withOpacity(0.6),
                                       borderRadius: BorderRadius.circular(25)),
                                   child: Row(
                                     mainAxisAlignment:
@@ -113,6 +113,7 @@ class _NoticeViewState extends State<NoticeView> {
                                       const Icon(
                                         Icons.download_for_offline_sharp,
                                         size: 25,
+                                        color: Colors.black,
                                       ),
                                     ],
                                   ).pOnly(top: 5, bottom: 5, left: 7, right: 7),

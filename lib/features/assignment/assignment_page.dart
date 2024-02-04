@@ -25,9 +25,9 @@ class _AssignmentViewState extends State<AssignmentView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      // backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.transparent,
         centerTitle: true,
         title: const Text(
           "ASSIGNMENTS",

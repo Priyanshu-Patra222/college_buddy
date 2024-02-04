@@ -21,6 +21,7 @@ class ListOfContent extends StatelessWidget {
           titleTxt,
           style: GoogleFonts.poppins(
             fontSize: 15,
+            // color: Colors.grey.shade700,
             fontWeight: FontWeight.w500,
           ),
         ),
@@ -30,7 +31,11 @@ class ListOfContent extends StatelessWidget {
           alignment: Alignment.centerLeft,
           width: double.infinity,
           decoration: BoxDecoration(
-            color: Colors.grey[300],
+            color: Colors.grey.withOpacity(0.3),
+            border: Border.all(
+              width: 0.5,
+              color: Colors.grey.withOpacity(0.5),
+            ),
             borderRadius: BorderRadius.circular(8),
           ),
           child: Text(

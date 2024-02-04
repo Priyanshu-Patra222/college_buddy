@@ -1,5 +1,4 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:college_buddy/const/color/app_colors.dart';
 import 'package:college_buddy/const/resource.dart';
 import 'package:college_buddy/core/router/router.gr.dart';
 import 'package:college_buddy/features/homepage/view/widgets/home_page_body_grid.dart';
@@ -24,7 +23,7 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.transparent,
       body: SafeArea(
         bottom: false,
         child: SingleChildScrollView(
@@ -39,7 +38,7 @@ class HomeView extends StatelessWidget {
               ),
               15.heightBox,
               const Divider(
-                color: AppColors.grey300,
+                // color: AppColors.grey300,
                 thickness: 1,
                 indent: 50,
                 endIndent: 50,

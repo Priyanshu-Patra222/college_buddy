@@ -5,6 +5,7 @@ import 'package:college_buddy/core/router/router.gr.dart';
 import 'package:college_buddy/data/service/login_db/login_db_service_pod.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class HomePageHeader extends StatelessWidget {
@@ -31,7 +32,8 @@ class HomePageHeader extends StatelessWidget {
                         .name;
                     return Text(
                       "Hey, $username!",
-                      style: const TextStyle(
+                      style: TextStyle(
+                        fontFamily: GoogleFonts.poppins().fontFamily,
                         overflow: TextOverflow.clip,
                         fontSize: 21,
                         fontWeight: FontWeight.bold,
@@ -39,10 +41,10 @@ class HomePageHeader extends StatelessWidget {
                     );
                   },
                 ),
-                const Text(
+                Text(
                   "Keep Smiling, Keep Shining 😅",
                   style: TextStyle(
-                    // fontFamily: GoogleFonts.poppins().fontFamily,
+                    fontFamily: GoogleFonts.poppins().fontFamily,
                     overflow: TextOverflow.clip,
                     fontSize: 13,
                     color: AppColors.grey500,
@@ -81,19 +83,23 @@ class HomePageHeader extends StatelessWidget {
               color: Colors.grey,
             ),
             filled: true,
-            fillColor: Colors.grey.shade200,
+            // fillColor: Colors.grey.shade200,
             hintText: 'Search for the updates here ...',
-            hintStyle: const TextStyle(
-              // fontFamily: GoogleFonts.poppins().fontFamily,
+            hintStyle: TextStyle(
+              fontFamily: GoogleFonts.poppins().fontFamily,
               overflow: TextOverflow.clip,
               fontSize: 13,
-              color: AppColors.grey400,
+              // color: AppColors.grey400,
               fontWeight: FontWeight.w500,
             ),
             contentPadding:
                 const EdgeInsets.only(left: 14.0, bottom: 12.0, top: 0.0),
             enabledBorder: OutlineInputBorder(
-              borderSide: BorderSide(color: Colors.grey.shade300),
+              borderSide: BorderSide(color: Colors.grey.shade500),
+              borderRadius: BorderRadius.circular(25),
+            ),
+            focusedBorder: OutlineInputBorder(
+              borderSide: const BorderSide(),
               borderRadius: BorderRadius.circular(25),
             ),
           ),

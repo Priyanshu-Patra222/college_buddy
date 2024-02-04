@@ -14,7 +14,7 @@ class AccountPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.white,
+          backgroundColor: Colors.transparent,
           title: const Text(
             "ACCOUNTS",
             style: TextStyle(

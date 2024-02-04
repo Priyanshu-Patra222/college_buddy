@@ -18,6 +18,7 @@ class BankDetailsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+          backgroundColor: Colors.transparent,
           title: const Text(
             "BANK DETAILS",
             style: TextStyle(
@@ -99,7 +100,7 @@ class BankDetailsPage extends StatelessWidget {
                         Text(
                           "Get Your All Payment Details Below..",
                           style: GoogleFonts.poppins(
-                              color: Colors.black,
+                              // color: Colors.grey.shade700,
                               fontSize: 18,
                               fontWeight: FontWeight.w700),
                         ),
