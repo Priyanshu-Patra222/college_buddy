@@ -1,5 +1,4 @@
 import 'package:auto_route/annotations.dart';
-import 'package:college_buddy/const/color/app_colors.dart';
 import 'package:college_buddy/const/resource.dart';
 import 'package:college_buddy/const/semesters/list_of_semesters.dart';
 import 'package:college_buddy/data/service/login_db/login_db_service_pod.dart';
@@ -31,8 +30,9 @@ class _AttendanceViewState extends State<AttendanceView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      // backgroundColor: Colors.white,
       appBar: AppBar(
+        backgroundColor: Colors.transparent,
         title: const Text(
           "ATTENDANCE",
           style: TextStyle(
@@ -57,29 +57,36 @@ class _AttendanceViewState extends State<AttendanceView> {
               ).objectCenter(),
               Consumer(
                 builder: (context, ref, child) {
-                  final studentId = ref.watch(loginDbProvider).getLoginModel()?.student.id;
-                  final attendanceAsync = ref.watch(attendanceProvider(studentId!));
+                  final studentId =
+                      ref.watch(loginDbProvider).getLoginModel()?.student.id;
+                  final attendanceAsync =
+                      ref.watch(attendanceProvider(studentId!));
                   return attendanceAsync.easyWhen(
                     data: (attendanceModel) {
                       return GridView.builder(
                         physics: const NeverScrollableScrollPhysics(),
                         shrinkWrap: true,
-                        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                        gridDelegate:
+                            const SliverGridDelegateWithFixedCrossAxisCount(
                           crossAxisCount: 2,
                           mainAxisSpacing: 15.0,
                           crossAxisSpacing: 15.0,
                           childAspectRatio: 1.0,
                           mainAxisExtent: 150,
                         ),
-                        itemCount: attendanceModel.attendanceDetails.attendance?.length,
+                        itemCount: attendanceModel
+                            .attendanceDetails.attendance?.length,
                         itemBuilder: (context, index) {
                           // final totalAttendanceLength = attendanceModel.attendanceDetails.attendance?.length;
-                          final eachAttendance =
-                              attendanceModel.attendanceDetails.attendance![index];
+                          final eachAttendance = attendanceModel
+                              .attendanceDetails.attendance![index];
                           return Container(
                             padding: const EdgeInsets.all(15),
                             decoration: BoxDecoration(
-                              color: AppColors.grey300,
+                              color: Colors.grey.withOpacity(0.2),
+                              border: Border.all(
+                                  width: 1,
+                                  color: Colors.grey.withOpacity(0.5)),
                               borderRadius: BorderRadius.circular(20),
                             ),
                             child: Column(
@@ -91,7 +98,7 @@ class _AttendanceViewState extends State<AttendanceView> {
                                     style: const TextStyle(
                                       fontSize: 16,
                                       fontWeight: FontWeight.bold,
-                                      color: AppColors.grey700,
+                                      // color: AppColors.grey700,
                                     ),
                                   ),
                                 ),
@@ -101,7 +108,7 @@ class _AttendanceViewState extends State<AttendanceView> {
                                     style: const TextStyle(
                                       fontSize: 50,
                                       fontWeight: FontWeight.bold,
-                                      color: AppColors.grey700,
+                                      // color: AppColors.grey700,
                                     ),
                                   ),
                                 ),
@@ -109,7 +116,7 @@ class _AttendanceViewState extends State<AttendanceView> {
                             ),
                           );
                         },
-                      );
+                      ).pOnly(top: 25);
                     },
                     loadingWidget: () => const CupertinoActivityIndicator(),
                   );

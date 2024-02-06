@@ -23,7 +23,7 @@ class CustomCards extends StatelessWidget {
         //   icon,
         //   // height: height,
         // ),
-        tileColor: Colors.transparent,
+        tileColor: Colors.grey.withOpacity(0.2),
         title: Text(
           cardTxt,
           style: GoogleFonts.poppins(

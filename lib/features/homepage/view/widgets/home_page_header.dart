@@ -83,23 +83,23 @@ class HomePageHeader extends StatelessWidget {
               color: Colors.grey,
             ),
             filled: true,
-            // fillColor: Colors.grey.shade200,
+            fillColor: Colors.grey.withOpacity(0.2),
             hintText: 'Search for the updates here ...',
             hintStyle: TextStyle(
               fontFamily: GoogleFonts.poppins().fontFamily,
               overflow: TextOverflow.clip,
               fontSize: 13,
-              // color: AppColors.grey400,
+              color: AppColors.grey400,
               fontWeight: FontWeight.w500,
             ),
             contentPadding:
                 const EdgeInsets.only(left: 14.0, bottom: 12.0, top: 0.0),
             enabledBorder: OutlineInputBorder(
-              borderSide: BorderSide(color: Colors.grey.shade500),
+              borderSide: BorderSide(color: Colors.grey.withOpacity(0.2)),
               borderRadius: BorderRadius.circular(25),
             ),
             focusedBorder: OutlineInputBorder(
-              borderSide: const BorderSide(),
+              borderSide: BorderSide(color: Colors.grey.withOpacity(0.2)),
               borderRadius: BorderRadius.circular(25),
             ),
           ),

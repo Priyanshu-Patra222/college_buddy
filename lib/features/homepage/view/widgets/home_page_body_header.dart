@@ -1,7 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:college_buddy/const/color/app_colors.dart';
 import 'package:college_buddy/core/router/router.gr.dart';
-import 'package:college_buddy/core/theme/theme_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:velocity_x/velocity_x.dart';
@@ -37,7 +36,6 @@ class HomeSecondaryIconRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
@@ -120,10 +118,10 @@ class HomePageSecondaryIcon extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
-          color: Colors.grey.shade200,
+          color: Colors.grey.withOpacity(0.2),
           border: Border.all(
             // color: const Color(0xff6C63FF),
-            color: Colors.grey.shade300,
+            color: Colors.grey.withOpacity(0.2),
             width: 1,
           ),
         ),

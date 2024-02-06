@@ -44,7 +44,7 @@ class CustomTextFormField extends StatelessWidget {
       readOnly: isReadOnly,
       style: GoogleFonts.inter(
         fontSize: 15,
-        color: Colors.black,
+        // color: Colors.black,
         fontWeight: FontWeight.bold,
       ),
       minLines: minLine,
@@ -57,7 +57,7 @@ class CustomTextFormField extends StatelessWidget {
         prefixIcon: prefixIcon,
         hintText: hintText,
         filled: true,
-        fillColor: Colors.grey.shade200,
+        // fillColor: Colors.grey.withOpacity(1),
         hintStyle: TextStyle(
           fontSize: 15,
           color: Colors.grey.shade500,

@@ -31,7 +31,9 @@ class ListOfContent extends StatelessWidget {
           alignment: Alignment.centerLeft,
           width: double.infinity,
           decoration: BoxDecoration(
-            color: Colors.grey.withOpacity(0.3),
+            color: Colors.grey.withOpacity(0.2),
+            // color: Colors.
+
             border: Border.all(
               width: 0.5,
               color: Colors.grey.withOpacity(0.5),

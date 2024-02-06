@@ -44,21 +44,43 @@ class _NavBarPageState extends State<NavBarPage> {
             ],
             bottomNavigationBuilder: (context, tabsRouter) {
               return NavigationBar(
+                // overlayColor: Colors.white,
                 selectedIndex: tabsRouter.activeIndex,
                 onDestinationSelected: tabsRouter.setActiveIndex,
-                indicatorColor: AppColors.kSecondaryThemeColor.withOpacity(0.5),
+                indicatorColor: AppColors.kSecondaryThemeColor.withOpacity(0.2),
+                indicatorShape: RoundedRectangleBorder(
+                    side: const BorderSide(
+                        width: 1, color: AppColors.kSecondaryThemeColor),
+                    borderRadius: BorderRadius.circular(25)),
                 destinations: [
                   NavigationDestination(
-                    icon: SvgPicture.asset(R.ASSETS_ICONS_HOME_SVG, height: 20),
+                    icon: SvgPicture.asset(
+                      R.ASSETS_ICONS_HOME_SVG,
+                      height: 20,
+                      color: tabsRouter.activeIndex == 0
+                          ? AppColors.kSecondaryThemeColor
+                          : Colors.grey.withOpacity(0.4),
+                    ),
                     label: "Home",
                   ),
                   NavigationDestination(
-                    icon:
-                        SvgPicture.asset(R.ASSETS_ICONS_NOTICE_SVG, height: 20),
+                    icon: SvgPicture.asset(
+                      R.ASSETS_ICONS_NOTICE_SVG,
+                      height: 20,
+                      color: tabsRouter.activeIndex == 1
+                          ? AppColors.kSecondaryThemeColor
+                          : Colors.grey.withOpacity(0.4),
+                    ),
                     label: "Notice",
                   ),
                   NavigationDestination(
-                    icon: SvgPicture.asset(R.ASSETS_ICONS_BANK_SVG, height: 22),
+                    icon: SvgPicture.asset(
+                      R.ASSETS_ICONS_BANK_SVG,
+                      height: 24,
+                      color: tabsRouter.activeIndex == 2
+                          ? AppColors.kSecondaryThemeColor
+                          : Colors.grey.withOpacity(0.4),
+                    ),
                     label: "Bank",
                   ),
                 ],

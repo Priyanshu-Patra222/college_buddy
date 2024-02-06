@@ -75,13 +75,16 @@ class _NoticeViewState extends State<NoticeView> {
               physics: const NeverScrollableScrollPhysics(),
               itemBuilder: (context, index) {
                 return Card(
+                  elevation: 0,
+                  color: Colors.grey.withOpacity(0.2),
                   shape: const RoundedRectangleBorder(
                     borderRadius: BorderRadius.all(Radius.circular(8)),
                   ),
                   child: ExpansionTile(
+                    backgroundColor: Colors.grey.withOpacity(0.2),
                     title: const Text("Latest Notice ..",
                         style: TextStyle(
-                            // color: Colors.black,
+                            // color: Colors.,
                             fontSize: 15,
                             fontWeight: FontWeight.w500)),
                     children: [

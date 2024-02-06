@@ -38,14 +38,14 @@ class _DropDownButtonFieldState extends State<DropDownButtonField> {
                 alignment: Alignment.center,
                 child: Text(
                   e,
-                  style: const TextStyle(color: Colors.black),
+                  // style: const TextStyle(color: Colors.black),
                 )),
           )
           .toList(),
       onChanged: (value) {},
       style: GoogleFonts.inter(
         fontSize: 16,
-        color: Colors.grey.shade500,
+        color: Colors.grey.shade200,
         fontWeight: FontWeight.bold,
       ),
       icon: const Icon(
@@ -53,17 +53,17 @@ class _DropDownButtonFieldState extends State<DropDownButtonField> {
         size: 30,
         color: Colors.grey,
       ),
-      dropdownColor: Colors.white,
+      // dropdownColor: Colors.white,
       decoration: InputDecoration(
         filled: true,
         hintText: widget.hintText,
         hintStyle: GoogleFonts.ubuntu(
           fontSize: 16,
-          color: Colors.grey.shade500,
+          // color: Colors.grey.shade500,
           fontWeight: FontWeight.bold,
         ),
         prefixIcon: widget.prefixIcon,
-        fillColor: Colors.grey.shade200,
+        // fillColor: Colors.grey.shade200,
         enabledBorder: OutlineInputBorder(
           borderSide: const BorderSide(color: Colors.transparent),
           borderRadius: BorderRadius.circular(8),

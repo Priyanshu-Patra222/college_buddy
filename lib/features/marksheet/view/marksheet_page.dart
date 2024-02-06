@@ -41,10 +41,9 @@ class _MarksheetViewState extends State<MarksheetView> {
           ),
         ),
         centerTitle: true,
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.transparent,
         elevation: 0,
       ),
-      backgroundColor: Colors.white,
       body: SafeArea(
         bottom: false,
         child: SingleChildScrollView(
@@ -57,8 +56,10 @@ class _MarksheetViewState extends State<MarksheetView> {
               ).objectCenter(),
               Consumer(
                 builder: (context, ref, child) {
-                  final studentId = ref.watch(loginDbProvider).getLoginModel()?.student.id;
-                  final marksheetAsync = ref.watch(marksheetProvider(studentId!));
+                  final studentId =
+                      ref.watch(loginDbProvider).getLoginModel()?.student.id;
+                  final marksheetAsync =
+                      ref.watch(marksheetProvider(studentId!));
                   return marksheetAsync.easyWhen(
                     data: (marksheetModel) {
                       return ListView.separated(
@@ -67,31 +68,37 @@ class _MarksheetViewState extends State<MarksheetView> {
                         primary: false,
                         itemCount: marksheetModel.marksheet!.length,
                         itemBuilder: (BuildContext context, int index) {
-                          final eachSemesterSubject = marksheetModel.marksheet![index];
+                          final eachSemesterSubject =
+                              marksheetModel.marksheet![index];
                           return Card(
-                            elevation: 4,
+                            color: Colors.grey.withOpacity(0.2),
+                            elevation: 1,
                             child: ExpansionTile(
                               title: Text(listOfSemesters[index]),
-                              backgroundColor: AppColors.grey200,
-                              collapsedBackgroundColor: AppColors.grey300,
+                              backgroundColor: Colors.grey.withOpacity(0.2),
+                              // collapsedBackgroundColor: AppColors.grey300,
                               children: [
                                 ListView.separated(
                                   shrinkWrap: true,
                                   physics: const NeverScrollableScrollPhysics(),
                                   primary: false,
-                                  itemCount: marksheetModel.marksheet![index].subjects!.length,
-                                  itemBuilder: (BuildContext context, int index) {
+                                  itemCount: marksheetModel
+                                      .marksheet![index].subjects!.length,
+                                  itemBuilder:
+                                      (BuildContext context, int index) {
                                     return ListTile(
                                       title: Text(
                                           "Subjects: ${eachSemesterSubject.subjects![index].subjectName}"),
                                       subtitle: Text(
                                         "Grade: ${(eachSemesterSubject.subjects![index].grade)}",
                                         style: const TextStyle(
-                                            fontSize: 16, fontWeight: FontWeight.bold),
+                                            fontSize: 16,
+                                            fontWeight: FontWeight.bold),
                                       ),
                                     );
                                   },
-                                  separatorBuilder: (BuildContext context, int index) {
+                                  separatorBuilder:
+                                      (BuildContext context, int index) {
                                     return const Divider(
                                       color: AppColors.grey400,
                                       indent: 25,
@@ -102,7 +109,7 @@ class _MarksheetViewState extends State<MarksheetView> {
                                 ),
                               ],
                             ),
-                          );
+                          ).pOnly(top: 15);
                         },
                         separatorBuilder: (BuildContext context, int index) {
                           return 12.heightBox;

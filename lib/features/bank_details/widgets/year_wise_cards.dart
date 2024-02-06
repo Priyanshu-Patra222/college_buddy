@@ -14,7 +14,7 @@ class YearWiseCard extends StatelessWidget {
     return Card(
       borderOnForeground: false,
       elevation: 0,
-      color: Colors.grey.withOpacity(0.3),
+      color: Colors.grey.withOpacity(0.2),
       // shape: Border.all(width: 1, color: Colors.grey.withOpacity(0.2)),
       child: ExpansionTile(
         title: Text(

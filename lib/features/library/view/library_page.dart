@@ -35,8 +35,9 @@ class _LibraryViewState extends State<LibraryView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      // backgroundColor: Colors.white,
       appBar: AppBar(
+        backgroundColor: Colors.transparent,
         title: const Text(
           "LIBRARY",
           style: TextStyle(
@@ -46,7 +47,6 @@ class _LibraryViewState extends State<LibraryView> {
           ),
         ),
         centerTitle: true,
-        backgroundColor: Colors.white,
         elevation: 0,
       ),
       body: SafeArea(
@@ -83,7 +83,10 @@ class _LibraryViewState extends State<LibraryView> {
                           return Container(
                             padding: const EdgeInsets.all(15),
                             decoration: BoxDecoration(
-                              color: AppColors.grey300,
+                              color: Colors.grey.withOpacity(0.2),
+                              border: Border.all(
+                                  width: 1,
+                                  color: Colors.grey.withOpacity(0.5)),
                               borderRadius: BorderRadius.circular(20),
                             ),
                             child: Column(
@@ -94,15 +97,14 @@ class _LibraryViewState extends State<LibraryView> {
                                   child: Text(
                                     "Due date: ${DateFormat.yMMMEd().format(eachBook.dueDate!)}",
                                     style: const TextStyle(
-
                                       fontSize: 16,
                                       fontWeight: FontWeight.w500,
-                                      color: AppColors.grey700,
+                                      // color: AppColors.grey600,
                                     ),
                                   ),
                                 ),
                                 const Divider(
-                                  color: AppColors.grey400,
+                                  color: AppColors.grey600,
                                   thickness: 1,
                                 ),
                                 Expanded(
@@ -111,7 +113,7 @@ class _LibraryViewState extends State<LibraryView> {
                                     eachBook.bookTitle.toString(),
                                     style: const TextStyle(
                                       fontWeight: FontWeight.bold,
-                                      color: AppColors.grey700,
+                                      // color: AppColors.grey600,
                                     ),
                                   ),
                                 ),
@@ -119,7 +121,7 @@ class _LibraryViewState extends State<LibraryView> {
                             ),
                           );
                         },
-                      );
+                      ).pOnly(top: 20);
                     },
                     loadingWidget: () => const CupertinoActivityIndicator(),
                   );
@@ -157,19 +159,19 @@ class _LibraryViewState extends State<LibraryView> {
         context: context,
         builder: (BuildContext context) {
           return AlertDialog(
-            backgroundColor: Colors.white,
+            backgroundColor: Colors.grey.withOpacity(0.7),
             elevation: 5,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(10),
             ),
-            shadowColor: Colors.blue,
-            surfaceTintColor: Colors.white,
-            title:  Center(
+            // shadowColor: Colors.blue,
+            // surfaceTintColor: Colors.white,
+            title: Center(
               child: Text(
                 'Request Books',
                 style: TextStyle(
                   fontFamily: GoogleFonts.poppins().fontFamily,
-                  color: Colors.black,
+                  // color: Colors.black,
                   fontSize: 18,
                   fontWeight: FontWeight.w700,
                 ),
@@ -189,7 +191,6 @@ class _LibraryViewState extends State<LibraryView> {
                 const DropDownButtonField(
                   name: LibraryKeys.booksName,
                   hintText: 'Select Your Semester',
-                  
                   dropDownItem: LibraryKeys.bookList,
                 ).pOnly(bottom: 8),
               ],
